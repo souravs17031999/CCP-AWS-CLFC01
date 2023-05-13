@@ -1,0 +1,192 @@
+============================================================
+Course Title: AWS Certified Cloud Practitioner (CLF-C01) Cert Prep: 3 Core Services
+Description: Documentation and resources for using Amazon Web Services (AWS) are generally rife with
+technical jargons and concepts that non-engineers find tough to decipher. The Introduction to AWS for No
+n-Engineers series serves as a bridge between non-engineers and AWS. In this course, the third installm
+ent in the series, get a nontechnical introduction to the core services that make up Amazon Web Services
+(AWS). Instructor Hiroko Nishimura—founder of Intro to AWS for Newbies—provides an overview of key
+AWS technology, including compute, storage, database, and network and content delivery services, as w
+ell as management tools. Discover which services you’d use to host your website, which ones you’d use t
+o store videos, and more.Note: This course also maps to the third domain of the AWS Certified Cloud Pra
+ctitioner exam. Taking all four courses in the Introduction to AWS for Non-Engineers series will help you p
+repare for the exam.
+
+***********************************************
+Chapter: 1. Compute
+***********************************************
+
+----------------------------------------------Video: AWS Global Infrastructure
+----------------------------------------------Note Time:
+Note Text:
+0:02:46
+
+AWS compute services -
+
+AWS EC2 (Elastic compute cloud) ?
+- Virtual server running on AWS
+- Configurable vCPU’s, RAM gbs, size/type of storage, network speed
+- Deploy extremely scalable and reliable virtual servers within minutes
+Elastic beanstalk ?
+- handles the deployment process, auto scaling, load balancing and health monitoring
+- upload the code and it handles it
+- freedom to manage the resources
+- automatically provision the resources
+Elastic load balancing ?
+- distribute the load of overall traffic among the servers so that each server takes care of handling only the
+fraction of overall traffic
+- Fault tolerant, scalable and secure
+- Monitor health of servers
+AWS Lambda ?
+- runs code in response to an event
+- automatically runs uploaded code and scale applications
+- pay only for the time code is running
+Lightsail ?
+
+- pre-configured and ready-to-use OS, web apps and dev stacks
+Deploying and operating in AWS ?
+- AWS management console
+- AWS CLI
+- AWS SDK
+Global infrastructure ?
+- AZs : Availability Zones , AWS data centers around the world. Completely indepednet of each other in n
+etwork and power source. Currently, almost six dozen AZs around the world.
+- regions: made of two or more AZs, currently two dozen around the world.
+Choosing which region to deploy the resources can vary on different reasons - compliance requirements
+- closest to physical location to reduce network latency
+- some servies are introduced earlier to some regions
+- SLA also vary by region
+- some region cost more than others
+High availability: hosting in Multiple regions
+Resiliency : ability to provide uninterrupted performance, even during natural disasters
+Redundancy: having multiple copies of data in different data centers
+
+***********************************************
+Chapter: 2. Storage
+***********************************************
+
+----------------------------------------------Video: Study break: Reviewing storage services
+----------------------------------------------Note Time:
+Note Text:
+0:00:21
+
+AWS storage services
+
+S3 ?
+- Static file storage. Stores everything as a object.
+- 99.999999999 % durable 11 9’s
+- charged only for what to use
+- Max limit of 5 TB (upload size)
+- backup and archiving
+- different storage classes - standard, intelligent-tiering, standard infrequent access, one zone-infrequent
+acces, Glacier, Glacier deep archive
+- Automated movement of data from storage to another class
+EBS (elastic block store) ?
+- Raw, unformatted block device attached to an EC2 instance to expand server storage
+
+- can add multiple EBS volumes
+- use as file systems or hard drives
+- dynamically change configurations to attached volumes
+- exist independently of ec2 instances so that they can be moved around
+Snowball ?
+- data migration tool
+- hardware solution - aws will physically ship you a snowball to move your data onto and ship back
+- you can move 50 TB with regular snowball up to 100 PB with a snowmobile (45 foot long shipping contai
+ner)
+- Usage fee , service fee, storage fee
+- expensive
+Storage Gateway ?
+- Local data on IT directly connected to s3/EBS via storage gateway
+- minimal latency
+- File gateway : async updates objects to s3 as local files are updated. Local cache to provide low latency
+access to recently accessed files
+- Volume gateway: upload files in blocks (virtual hard drives). Async backed up as point-in-time snapshots
+and stored as EBS snapshots.
+stored volume: Complete copy on-premises, sends snapshots to AWS.
+cached volume: keeps local cache on-premise, complete copy on AWS
+- Tape gateway: uses existing tape based backup infra to virtual space. data locally stored and sync uploa
+des to s3. Data can be archived using Amazon glacier.
+
+***********************************************
+Chapter: 3. Database
+***********************************************
+
+----------------------------------------------Video: Study break: Reviewing database services
+----------------------------------------------Note Time:
+Note Text:
+0:00:00
+
+AWS database services
+
+DynamoDB ?
+- Secure, scalable, fast and flexible NoSQL database
+- Virtual unlimited throughput and storage
+- serverless : no need to provision, manage or update your own servers
+- Scales tables up or down. Fault tolerant.
+- Specify workload type
+RDS ?
+- RDBMS service
+- compatible with postgres, mysql, mariaDB, oracle DB, Microsoft SQL server
+Amazon Aurora ?
+
+- Fully managed by Amazon.
+- 5x faster than standard MYSQL, 3X faster than standard postgres
+- DB can scale upto 64TB per instances
+RedShift ?
+- Data warehouse service , intergated with data lakes (raw unformatted data)
+- data warehouse service using encryption that is fully compatible with legal requirements such as HIPAA
+data.
+
+***********************************************
+Chapter: 4. Network and Content Delivery
+***********************************************
+
+----------------------------------------------Video: Study break: Network and content delivery
+----------------------------------------------Note Time:
+Note Text:
+0:00:06
+
+AWS network services
+
+AWS VPC (virtual private cloud)
+- logically isolated section of cloud
+- security groups and network access control lists to filter inbound and outbound traffic at instance and su
+bnet level
+Cloudfront ?
+- global distributed servers of CDN (content delivery networks) for aws
+- integrated with AWS sheild for DDoS mitigation
+- cached to edge locations of end-user locations
+Route 53 ?
+- Own service to setup domain (DNS)
+- connect user requests to infra running on aws
+- route users to infra outside of aws as DNS service
+- auto naming for service discovery
+- domain registration and domain name system
+
+***********************************************
+Chapter: 5. Management Tools
+***********************************************
+
+----------------------------------------------Video: Study break: Reviewing management tools
+----------------------------------------------Note Time:
+Note Text:
+0:00:11
+
+AWS management tools
+
+CloudFormation ?
+- Templates : recipes for resource deployment in AWS
+- Provision and deploy fully configured infra
+- Update or manage stacks using AWS management console, cli or sdks
+- Version control
+- Infra as a code (IaaC)
+CloudTrail ?
+- Track user activity and API usage
+- Audits, logging of services
+- can be automated to notify incase of security events etc...
+CloudWatch ?
+- Monitoring of services for aws infra
+- Natively integrated with over 70 services
+- Gain system wide visibility into resource utilization , application performance and operational health
+- Get cloudwatch alarms and notifications for alerts
+
+

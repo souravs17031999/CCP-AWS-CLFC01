@@ -1,0 +1,121 @@
+Course Title: AWS Certified Cloud Practitioner (CLF-C01) Cert Prep: 1 Cloud Concepts
+Description: Amazon Web Services (AWS)—and cloud computing in general—can be difficult for people
+without technical backgrounds to decipher. This introductory course is a bridge between non-engineers a
+nd the cloud. It is the first in a four-part series designed to help professionals in non-technical roles, includ
+ing finance teams, project managers, and marketers, make the best use of AWS. Instructor Hiroko Nishim
+ura—founder of Intro to AWS for Newbies—provides a brief history of cloud computing, an overview of clo
+ud deployment models, and a summary of cloud design principles. She then shows how to create an acco
+unt and start using the AWS Free Tier to gain hands-on experience with AWS products and services. Plus
+, get exam tips and learn about resources for professionals studying for the AWS Certified Cloud Practitio
+ner exam.Note: This course also maps to the first domain of the AWS Certified Cloud Practitioner exam. T
+aking all four courses in the Introduction to AWS for Non-Engineers series will help you prepare for the ex
+am.
+
+***********************************************
+Chapter: 1. Introduction to Cloud Computing
+***********************************************
+
+----------------------------------------------Video: Wrapping up: Cloud computing
+----------------------------------------------Note Time:
+Note Text:
+0:00:07
+
+What’s cloud ?
+
+- On-demand delivery of compute, database storage, application, and other IT resources
+Why cloud computing ?
+- Traditional processes would go through procurement processes whereas here, it would be pay as you g
+o model anywhere , anytime
+- Scaling is hard in traditional because everytime you will have to go back to procurement process, so it s
+hould be cloud way which can scale easily on the fly.
+How it started ?
+- Mainframe started 1950’s (a single computer control center with dumb terminals spread on different plac
+es sharing compute resources), Virtual machines 1970’s (multiple OS running on single computer)
+- Hypervisor : Software that links multiple hardwares to use as one giant resource (adding up of all the me
+mory and storage of all the computers as one resource and pool those resources). So, eventually users in
+real-world use the pooled resources of the huge computers (again it’s a sum of multiple machines) in larg
+e datacenters.
+Daily life usage ?
+- Gmail, google photos, youtube (google cloud), Outlook 365 (microsoft cloud), AWS, streaming services,
+file sharing services, social media etc.....
+
+***********************************************
+Chapter: 2. Cloud Computing Concepts
+***********************************************
+
+----------------------------------------------Video: Advantages of cloud computing
+----------------------------------------------Note Time:
+Note Text:
+0:02:37
+
+Advantages of cloud computing :
+
+- Trade capital expense for variable expense
+- Benefit from massive economies of scale
+- Stop guessing capacity
+- Increase speed and agility
+- Stop spending money in maintaining data centres
+- Go global in minutes
+
+----------------------------------------------Video: Cloud computing deployments
+----------------------------------------------Note Time:
+Note Text:
+0:00:00
+
+Cloud computing models ?
+
+- Iaas (infrastructure as a service)
+- Basic building blocks
+- Most closest to hosted datacenters/on-premises data center
+- Most flexiblity and management control
+- Requires highest technical knowledge
+- ex. AZURE, GCP, AWS ETC...
+- Paas (platform as a service)
+- allows deploy and manage applications without worrying about underlying infra
+- Heroku, Google app engine,
+- Less flexibliity, packages precontructed
+- requires less knowledge about infra allowing focus on building and deploying applications
+Saas (Software as a service)
+- don’t need to worry about deploying and managing anything, Just use the software for your usecases
+- Outlook, Gmail etc...
+- Least flexiblity, Least technical knowledge, features out of the box for end users
+
+----------------------------------------------Video: Study break: Reviewing cloud computing
+----------------------------------------------Note Time:
+Note Text:
+0:00:26
+
+Cloud deployment models:
+
+- Cloud: 100% of IT infrastructure on cloud.
+- on-premise: Private cloud. Use Virtualization to deploy resources in their data centers. Not connected to
+Internet. Security and data privacy. Healthcare usecases etc...
+
+- Hybrid: Data partially on the cloud, partially on-premise data center. Can use as backup and DR solution
+s. Legacy company resources migrating towards cloud.
+Design principles of cloud computing - Avoid unnecessary costs (use only what is required, monitor costs)
+- Reliability (Test DR, backups)
+- Efficiency (should allow to go global in minutes)
+- Security (data should be protected on transit and at REST, enable traceability, manage access, audit)
+- Operational excellence (document everything, update processes, anticipate failures, automate)
+- Sustainibility (minimize carbon footprint, energy efficient resources on cloud)
+
+***********************************************
+Chapter: 4. Diving into AWS
+***********************************************
+
+----------------------------------------------Video: Popular services offered in AWS
+----------------------------------------------Note Time:
+Note Text:
+0:00:00
+
+AWS Popular services :
+
+- Compute services: Provide virtual server hosting, container management, serverless. Instead of hosting,
+orgs can rent
+- Storage services: Provide storage for both in-use and archival files. Daily backups, store different kinds
+of files
+- Database services: RDS, NoSql, petabyte-scale data warehouse, caching services etc....
+================================================================
+
+

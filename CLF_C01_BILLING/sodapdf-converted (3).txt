@@ -1,0 +1,63 @@
+=========================================================
+Course Title: AWS Certified Cloud Practitioner (CLF-C01) Cert Prep: 4 Billing and Pricing
+Description: Curious about the price tag associated with moving your data center to the cloud? In this cou
+rse—the fourth installment in the Introduction to AWS for Non-Engineers series—get a nontechnical overv
+iew of billing, pricing, and support plans in Amazon Web Services (AWS). Instructor Hiroko Nishimura—fo
+under of Intro to AWS for Newbies—provides an overview of the Billing and Cost Management dashboard
+, which provides an at-a-glance look at all your monthly charges, alerts, and service usages. She then det
+ails the different types of charges you may incur; shares tools that you can use to keep costs down; and c
+overs the different support plans offered by AWS.Note: This course also maps to the fourth domain of the
+AWS Certified Cloud Practitioner exam. Taking all four courses in the Introduction to AWS for Non-Engine
+ers series will help you prepare for the exam.
+
+***********************************************
+Chapter: 1. Prepare Your App
+***********************************************
+
+----------------------------------------------Video: AWS Free Tier
+----------------------------------------------Note Time:
+Note Text:
+0:00:10
+
+AWS billing and pricing
+
+Billing and cost management dashboard ?
+- Estimate and plan your AWS costs
+- Consolidated billing: Simple accounting for multiple AWS accounts within your organization
+- Alert you when you are nearing usage thresholds, which could mean additional costs
+- Cost explorer, cost forecast, billing reports
+Charges are based on different pricing models.
+Storage type (s3 expensive but faster reterival, glacier cheaper but high latency)
+Aurora charges for Data In/Data Out
+AWS consolidated billing ?
+- Create a payer account that views and pays the combined billing charges for all linked accounts
+- Indepdent account, but can’t use any other services
+- cannot deploy services into the linked accounts
+- useful if there are multiple AWS accounts within a organization, it shows usage from a large entity- org a
+s a whole, maybe eligible for a volume discounts
+Cost calculators ?
+- estimate the cost of moving from on-premise to cloud
+- TCO (total cost of ownership) includes upfront hardware/infra costs and maintainence costs
+- pay as you go model in cloud
+- TCO is reduced in cloud as compared to on-premise
+
+***********************************************
+Chapter: 2. Support Plans
+***********************************************
+
+----------------------------------------------Video: Study break: Reviewing AWS support plans
+----------------------------------------------Note Time:
+Note Text:
+0:00:02
+
+AWS Support plans :
+
+- Basic support plans (testing out resources by orgs), free , access to only customer forums
+- Developer plans (experimenting with high intensity resources), SLA 12 hrs for impaired system, 24hrs fo
+r normal guidance. Not for production usage.
+- Business plans (AWS in production usage, support API for automation). SLA 24/7 via phone, email and
+chat. 1 hr urgent support cases when production system is down.
+- Enterprise plans (on-ramp support plan, architechture and scaling guidance), access to technical accoun
+t managers (ATM). 24/7 support via phone, email chat. 30 mins response for business critical systems.
+
+
