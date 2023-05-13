@@ -145,14 +145,14 @@ AWS Pricing Calculator is a web-based service that you can use to create cost es
 - Drive architectures using data: Your cloud infrastructure is code, so you can use that data to inform your architecture choices and improvements over time.
 - Improve through game days: Test how your architecture and processes perform by regularly scheduling game days to simulate events in production.
 
-* The pillars of the framework
-** Operational excellence
+* The pillars of the framework 
+** Operational excellence 
 - Perform operations as code: You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their run process by initiating them in response to events.
 - Make frequent, small, reversible changes: Design workloads to permit components to be updated regularly. 
 - Refine operations procedures frequently: Set up regular game days to review and validate that all procedures are effective and that teams are familiar with them.
 - Anticipate failure: Perform “pre-mortem” exercises to identify potential sources of failure so that they can be removed or mitigated.
 - Learn from all operational failures: Drive improvement through lessons learned from all operational events and failures.
-** Security
+** Security 
 - Implement a strong identity foundation: Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources.
 - Maintain traceability: Monitor, alert, and audit actions and changes to your environment in real time. Integrate log and metric collection with systems to automatically investigate and take action.
 - Apply security at all layers: Apply a defense in depth approach with multiple security controls
@@ -160,25 +160,25 @@ AWS Pricing Calculator is a web-based service that you can use to create cost es
 - Protect data in transit and at rest: Classify your data into sensitivity levels and use mechanisms, such as encryption, tokenization, and access control where appropriate.
 - Keep people away from data: Use mechanisms and tools to reduce or eliminate the need for direct access or manual processing of data. This reduces the risk of mishandling or modification and human error when handling sensitive data.
 - Prepare for security events: Prepare for an incident by having incident management and investigation policy and processes that align to your organizational requirements.
-** Reliability
+** Reliability  
 - Automatically recover from failure: By monitoring a workload for key performance indicators (KPIs), you can start automation when a threshold is breached.
 - Test recovery procedures: In an on-premises environment, testing is often conducted to prove that the workload works in a particular scenario. Testing is not typically used to validate recovery strategies.
 - Scale horizontally to increase aggregate workload availability: Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload.
 - Stop guessing capacity: A common cause of failure in on-premises workloads is resource saturation, when the demands placed on a workload exceed the capacity of that workload
 - Manage change in automation: Changes to your infrastructure should be made using automation.
-** Performance efficiency
+** Performance efficiency  
 - Democratize advanced technologies: Make advanced technology implementation smoother for your team by delegating complex tasks to your cloud vendor.
 - Go global in minutes: Deploying your workload in multiple AWS Regions around the world permits you to provide lower latency and a better experience for your customers at minimal cost.
 - Use serverless architectures: Serverless architectures remove the need for you to run and maintain physical servers for traditional compute activities.
 - Experiment more often: With virtual and automatable resources, you can quickly carry out comparative testing using different types of instances, storage, or configurations.
 - Consider mechanical sympathy: Understand how cloud services are consumed and always use the technology approach that aligns with your workload goals.
-** Cost optimization
+** Cost optimization  
 - Implement Cloud Financial Management: To achieve financial success and accelerate business value realization in the cloud, invest in Cloud Financial Management and Cost Optimization.
 - Adopt a consumption model: Pay only for the computing resources that you require and increase or decrease usage depending on business requirements, not by using elaborate forecasting.
 - Measure overall efficiency: Measure the business output of the workload and the costs associated with delivering it.
 - Stop spending money on undifferentiated heavy lifting: AWS does the heavy lifting of data center operations like racking, stacking, and powering servers. 
 - Analyze and attribute expenditure: The cloud makes it simple to accurately identify the usage and cost of systems, which then permits transparent attribution of IT costs to individual workload owners.
-** Sustainability
+** Sustainability   
 - Understand your impact: Measure the impact of your cloud workload and model the future impact of your workload.
 - Establish sustainability goals: For each cloud workload, establish long-term sustainability goals such as reducing the compute and storage resources required per transaction.
 - Maximize utilization: Right-size workloads and implement efficient design to verify high utilization and maximize the energy efficiency of the underlying hardware.
