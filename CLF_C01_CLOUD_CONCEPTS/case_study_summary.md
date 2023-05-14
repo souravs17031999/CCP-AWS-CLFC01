@@ -143,7 +143,10 @@ AWS Pricing Calculator is a web-based service that you can use to create cost es
 - Automate with architectural experimentation in mind: Automation permits you to create and replicate your workloads at low cost and avoid the expense of manual effort.
 - Consider evolutionary architectures: This permits systems to evolve over time so that businesses can take advantage of innovations as a standard practice.
 - Drive architectures using data: Your cloud infrastructure is code, so you can use that data to inform your architecture choices and improvements over time.
-- Improve through game days: Test how your architecture and processes perform by regularly scheduling game days to simulate events in production.  
+- Improve through game days: Test how your architecture and processes perform by regularly scheduling game days to simulate events in production.   
+
+AWS Architecture Center : web portal for Reference architecture examples and diagrams
+
 
 * The pillars of the framework 
 *** Operational excellence 
