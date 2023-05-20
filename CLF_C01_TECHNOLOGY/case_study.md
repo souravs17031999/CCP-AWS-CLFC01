@@ -452,15 +452,99 @@ management required.
 - Amazon Elastic File Service (EFS) is the solution you can use to provide users with NFS capabilities.
 
 **Amazon S3 File Gateway**
-- Store and access objects in Amazon S3 from NFS or SMB file data with local caching   
-- File gateway, FsX file gateway, Tape gateway, Volume gateway
-- 
+- Store and access objects in Amazon S3 from NFS or SMB file data with local caching    
+- File gateway, FsX file gateway, Tape gateway, Volume gateway 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/0438ce41-073c-407a-875f-3c7e7d35b6cd)   
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5e47f302-631d-4fa2-ad18-7d8fae42ac84)   
 
+## AWS Networking Services   
+
+**VPC (Amazon Virtual Private Cloud)**
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c991b728-6052-4410-8f14-94104e24374b)    
+
+- you can launch AWS resources in a logically isolated virtual network that you've defined.  
+- A subnet is a range of IP addresses in your VPC. A subnet must reside in a single Availability Zone.
+- Each subnet must be associated with a route table, which specifies the allowed routes for outbound traffic leaving the subnet.  
+- You can assign IP addresses, both IPv4 and IPv6, to your VPCs and subnets.
+- Use route tables to determine where network traffic from your subnet or gateway is directed.
+- A gateway connects your VPC to another network. For example, use an internet gateway to connect your VPC to the internet. Use a VPC endpoint to connect to AWS services privately   
+- An internet gateway enables resources in your public subnets (such as EC2 instances) to connect to the internet if the resource has a public IPv4 address or an IPv6 address. Similarly, resources on the internet can initiate a connection to resources in your subnet using the public IPv4 address or IPv6 address.  
+- Use a VPC peering connection to route traffic between the resources in two VPCs.
+_VPC PEERING CONNECTION_  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/4a888b9d-eecc-4b6e-9039-95eebcfb89de)     
+
+- Use a transit gateway, which acts as a central hub, to route traffic between your VPCs, VPN connections, and AWS Direct Connect connections
+_AWS TRANSIT GATEWAY_  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/d5f18a11-1c7e-4f66-99d9-2660c972ac85)   
+
+- An Elastic IP address is a static, public IPv4 address designed for dynamic cloud computing. You can associate an Elastic IP address with any instance or network interface in any VPC in your account.
+- A NAT gateway is a Network Address Translation (NAT) service. You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances. Each NAT gateway is created in a specific Availability Zone.
+- Internet traffic from the instances in the private subnet is routed to the NAT instance, which then communicates with the internet. Therefore, the NAT instance must have internet access. It must be in a public subnet (a subnet that has a route table with a route to the internet gateway), and it must have a public IP address or an Elastic IP address.
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/bd27b072-7ad2-4e5c-8a6c-fdd12b40e57a)    
+
+_Subnet types_
+- Public subnet – The subnet has a direct route to an internet gateway. Resources in a public subnet can access the public internet.
+- Private subnet – The subnet does not have a direct route to an internet gateway. Resources in a private subnet require a NAT device to access the public internet.
+- The subnet has a route to a Site-to-Site VPN connection through a virtual private gateway. The subnet does not have a route to an internet gateway.
+- Isolated subnet – The subnet has no routes to destinations outside its VPC. Resources in an isolated subnet can only access or be accessed by other resources in the same VPC.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e0f049ac-e9b3-418b-959c-4c7841161588)   
+
+**Security Groups**
+- A security group controls the traffic that is allowed to reach and leave the resources that it is associated with. 
+- A security group acts as a firewall that controls the traffic allowed to and from the resources in your virtual private cloud (VPC). You can choose the ports and protocols to allow for inbound traffic and for outbound traffic.  
+- For example, after you associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.  
+- The following table summarizes the basic differences between security groups and network ACLs.    
+- When you first create a security group, it has no inbound rules, it has an outbound rule that allows all outbound traffic from the resource.   
+
+_Network ACL_
+- A network access control list (ACL) allows or denies specific inbound or outbound traffic at the subnet level.
+-  By default, it allows all inbound and outbound IPv4 traffic and, if applicable, IPv6 traffic.
+
+Security group	Network ACL   
+Operates at the instance level	Operates at the subnet level  
+Applies to an instance only if it is associated with the instance	Applies to all instances deployed in the associated subnet (providing an additional layer of defense if security group rules are too permissive)  
+Supports allow rules only	Supports allow rules and deny rules  
+Evaluates all rules before deciding whether to allow traffic	Evaluates rules in order, starting with the lowest numbered rule, when deciding whether to allow traffic  
+Stateful: Return traffic is allowed, regardless of the rules	Stateless: Return traffic must be explicitly allowed by the rules  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/3a2718ee-be49-4969-9b35-03740e1b747f)   
+
+**Route 53**
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/50941470-5dd2-4018-abdd-f630b93819e0)     
+
+- Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service.
+_In the following order:_ 
+- Register domain names: Route 53 lets you register a name for your website or web application, known as a domain name.
+- Route internet traffic to the resources for your domain: When a user opens a web browser and enters your domain name (example.com) or subdomain name (acme.example.com) in the address bar, Route 53 helps connect the browser with your website or web application.
+- Check the health of your resources: Route 53 sends automated requests over the internet to a resource, such as a web server, to verify that it's reachable, available, and functional.   
 
 
-## AWS Networking Services
+- top-level domain (TLD): The last part of a domain name, such as .com, .org, or .ninja.
+- The Domain Name System translates easily understood names such as example.com into the numbers, known as IP addresses, that allow computers to find each other on the internet.
+- DNS resolver: A DNS server, often managed by an internet service provider (ISP), that acts as an intermediary between user requests and DNS name servers.
+- A CIDR block is an IP range used with IP-based routing. In Route 53 You can specify CIDR block from /0 to /24 for IPv4 and/0 to /48 for IPv6.
+- DNS record: An object in a hosted zone that you use to define how you want to route traffic for the domain or a subdomain. For example, you might create records for example.com and www.example.com that route traffic to a web server that has an IP address of 192.0.2.234.
+- TTL (time to live): The amount of time, in seconds, that you want a DNS resolver to cache (store) the values for a record before submitting another request to Route 53  
+_Multiple routing policy:_
+
+Simple routing policy – Use to route internet traffic to a single resource that performs a given function for your domain, for example, a web server that serves content for the example.com website.  
+
+Failover routing policy – Use when you want to configure active-passive failover.   
+
+Geolocation routing policy – Use when you want to route internet traffic to your resources based on the location of your users.  
+
+Geoproximity routing policy – Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.   
+
+Latency routing policy – Use when you have resources in multiple locations and you want to route traffic to the resource that provides the best latency.   
+
+IP-based routing policy – Use when you want to route traffic based on the location of your users, and have the IP addresses that the traffic originates from.   
+
+Multivalue answer routing policy – Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random.    
+
+Weighted routing policy – Use to route traffic to multiple resources in proportions that you specify.    
 
 ## AWS Databases Services
