@@ -191,3 +191,144 @@ _AWS Global Accelerator_
 
 ----------------------------------------------------------------------------
 
+## AWS Compute Services
+
+**different compute families**
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/169992e3-2237-4872-9a86-f31a8151f799)   
+
+Instance families   
+C – Compute  
+
+D – Dense storage  
+
+F – FPGA   
+
+G – GPU   
+
+Hpc – High performance computing  
+
+I – I/O   
+
+Inf – AWS Inferentia   
+
+M – Most scenarios   
+
+P – GPU   
+
+R – Random access memory  
+
+T – Turbo   
+
+Trn – AWS Tranium  
+
+U – Ultra-high memory  
+
+VT – Video transcoding   
+
+X – Extra-large memory  
+
+Additional capabilities    
+a – AMD processors   
+
+g – AWS Graviton processors   
+
+i – Intel processors   
+
+d – Instance store volumes   
+
+n – Network optimization    
+
+b – Block storage optimization  
+
+e – Extra storage or memory   
+
+z – High frequency  
+
+_general purpose_
+- provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads.
+- ex. Applications built on open-source software such as application servers, microservices, gaming servers, midsize data stores, and caching fleets.  
+
+_Compute Optimized_
+- Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. high performance computing (HPC), scientific modeling, dedicated gaming servers, machine learning etc...
+- ex. batch processing, ad serving, video encoding, gaming, scientific modelling
+
+_Memory Optimized_
+- Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory.
+- ex. open-source databases, in-memory caches, and real-time big data analytics.
+
+_Storage Optimized_
+- Storage optimized instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage. IOPS applications.
+- ex. MySQL, MariaDB, and PostgreSQL), and NoSQL databases (KeyDB, ScyllaDB, and Cassandra).
+
+_Accelerated Computing_
+- Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing
+- ex. Machine learning, high performance computing, computational fluid dynamics, computational finance, seismic analysis, speech recognition, autonomous vehicles, and drug discovery.
+
+### Instances (virtual machines)
+
+**EC2 (Amazon Elastic Compute Cloud)**
+- Amazon EC2 delivers secure, reliable, high-performance, and cost-effective compute infrastructure to meet demanding business needs.
+- Amazon EC2 delivers the broadest for ML projects 
+- 4 9's availability SLA's
+- The AWS Nitro System is the underlying platform for our next generation of EC2 instances: high security
+
+**EC2 spot instances**
+- Spot Instances are available at up to a 90% discount compared to On-Demand prices.
+- You can run hyperscale workloads at a significant cost savings or you can accelerate your workloads by running parallel tasks.
+- You also have the option to hibernate, stop or terminate your Spot Instances when EC2 reclaims the capacity back with two-minutes of notice.
+- However, Spot does not guarantee that you can keep your running instances long enough to finish your workloads. Spot also does not guarantee that you can get immediate availability of the instances that you are looking for, or that you can always get the aggregate capacity that you requested. 
+
+**EC2 Auto Scaling**
+- Add or remove compute capacity to meet changing demand
+- Follow the demand curve for your applications so that you don’t have to provision Amazon EC2 capacity in advance.
+- An Auto Scaling group contains a collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management.
+- An Auto Scaling group also lets you use Amazon EC2 Auto Scaling features such as health check replacements and scaling policies.
+- scaling options: Maintain current instance levels at all times, Scale manually where you specify only the change in the maximum, minimum, or desired capacity of your Auto Scaling group, Scale based on a schedule, Scale based on demand, Use predictive scaling.
+
+**Load Balancers**
+- Elastic Load Balancing automatically distributes your incoming application traffic across all the EC2 instances that you are running. Elastic Load Balancing helps to manage incoming requests by optimally routing traffic so that no one instance is overwhelmed.
+- To use Elastic Load Balancing with your Auto Scaling group, attach the load balancer to your Auto Scaling group.
+
+_Application Load Balancer_
+- Routes and load balances at the application layer (HTTP/HTTPS), and supports path-based routing. WAF rules to protect against common attacks.
+
+_Network Load Balancer_
+- Routes and load balances at the transport layer (TCP/UDP Layer-4), based on address information extracted from the Layer-4 header.
+
+_Gateway Load Balancer_
+- Distributes traffic to a fleet of appliance instances. Provides scale, availability, and simplicity for third-party virtual appliances, such as firewalls, intrusion detection and prevention systems, and other appliances.
+
+_Classic Load Balancer_
+- Routes and load balances either at the transport layer (TCP/SSL), or at the application layer (HTTP/HTTPS).
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/ba33f4ca-82c2-43cc-89e8-c24d43e795cc)   
+
+**Amazon LightSail**
+- Use pre-configured development stacks like LAMP, Nginx, MEAN, and Node.js. to get online quickly and easily.
+- Build and personalize your blog, ecommerce, or personal website in just a few clicks, with pre-configured applications like WordPress, Magento, Prestashop, and Joomla.
+- Easily create and delete development sandboxes and test environments
+
+**Amazon Batch**
+- Run hundreds of thousands of batch and machine learning (ML) computing jobs without installing software or servers.
+- AWS Batch lets developers, scientists, and engineers efficiently run hundreds of thousands of batch and ML computing jobs while optimizing compute resources
+- Run financial services analyses, drugs and sequence genomes, render visual effects, ML training Jobs etc...
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/14b48264-0ffc-4bf8-9071-be70015173cf)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/2856695b-b81e-4fad-8325-18d99bdf98e6)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c3e5efa0-e26f-44e8-8e4a-ca1efd58014b)  
+
+
+
+### Containers 
+
+### Edge and Hybrid
+
+### Cost management
+
+
+## AWS Storage Services
+
+## AWS Networking Services
+
+## AWS Databases Services
