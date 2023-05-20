@@ -316,16 +316,73 @@ _Classic Load Balancer_
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/14b48264-0ffc-4bf8-9071-be70015173cf)  
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/2856695b-b81e-4fad-8325-18d99bdf98e6)  
-![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c3e5efa0-e26f-44e8-8e4a-ca1efd58014b)  
-
-
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c3e5efa0-e26f-44e8-8e4a-ca1efd58014b)   
 
 ### Containers 
 
+**Amazon Elastic Container Service (Amazon ECS)**
+- Run highly secure, reliable, and scalable containers. fully managed container orchestration service
+- Automatically scale and run web applications in multiple Availability Zones with the performance, scale, reliability, and availability of AWS.
+- Plan, schedule, and run batch computing workloads and train NLP, ML models without managing the infrastructure by using Amazon ECS with AWS Fargate.
+- Amazon ECS supports Docker and enables you to run and manage Docker containers.
+- Amazon ECS allows you to define tasks through a JavaScript Object Notation (JSON) template called a _Task Definition_. Within a Task Definition, you can specify one or more containers that are required for your task, including the Docker repository and image, memory and CPU requirements, shared data volumes, and how the containers are linked to each other.You can launch as many tasks as you want from a single Task Definition file that you can register with the service.
+
+**Amazon ECS Anywhere**
+- Run containers on your on-premises infrastructure
+- Run containerized data-processing workloads at edge locations on your own hardware to maintain reduced latency.
+- Use your existing Windows Server licenses to run Windows container workloads in on-premises environments.
+
+**Amazon Elastic Container Registry**
+- Push container images to Amazon ECR without installing or scaling infrastructure, and pull images using any management tool.
+- Meet your image compliance security requirements using the tightly integrated Amazon Inspector vulnerability management service
+- Access and distribute your images faster, reduce download times, and improve availability using a scalable, durable architecture.
+- like Docker Hub etc...
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e477eb63-f888-4984-a638-c5a482bd4bad)  
+
+**Amazon Elastic Kubernetes Service (Amazon EKS)**
+- The most trusted way to start, run, and scale Kubernetes. Leverage built-in integrations with AWS services such as EC2, VPC, IAM, EBS and more 
+- Ensure a more secure Kubernetes environment with security patches automatically applied to your cluster’s control plane.
+
+**AWS Fargate**
+- Deploy and manage your applications, not infrastructure. Fargate removes the operational overhead of scaling, patching, securing, and managing servers.
+- AWS Fargate is compatible with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS).
+- abstracts the underlying infrastructure and can be used to launch and run containers without having to provision or manage EC2 instances.
+
+**App Runner**
+- AWS App Runner is a fully managed container application service that lets you build, deploy, and run containerized web applications and API services without prior infrastructure or container experience.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/95368ddc-5a1e-475f-afdd-ac910e4ad3ea)  
+
+### Serverless
+
+**AWS Lambda**
+- Run code without provisioning or managing infrastructure. Simply write and upload code as a .zip file or container image.
+- Automatically respond to code execution requests at any scale, from a dozen events per day to hundreds of thousands per second.
+- Respond to high demand in double-digit milliseconds with Provisioned Concurrency.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/797c8230-a472-4c72-8621-3322f79d1e90)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/f717d5da-84d7-4ca8-b4c0-d840c37e2ccc)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/ec2dd29a-cefc-4722-8a92-ee6afdd76b98)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/40434a2a-9068-4d16-9875-10bd21ee426e)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/8260f2f7-a30a-4b58-805c-3b3659e5bbef)  
+
+
 ### Edge and Hybrid
+
+- All covered earlier 
 
 ### Cost management
 
+**EC2 Image Builder**
+- EC2 Image Builder simplifies the building, testing, and deployment of Virtual Machine and container images for use on AWS or on-premises.
+- providing a simple graphical interface, built-in automation, and AWS-provided security settings. With Image Builder, there are no manual steps for updating an image nor do you have to build your own automation pipeline.
+- validate your images for functionality, compatibility, and security compliance with AWS-provided tests and your own tests before using them in production
+- Examples of secure image with AWS-provided and/or custom templates includes: 1/ Ensure security patches are applied, 2/ Enforce strong passwords, 3/ Turn on full disk encryption, 4/ Close all non-essential open ports, 5/ Enable software firewall, 6/ Enable logging/audit controls.
+
+**AMI**
+- An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. You must specify an AMI when you launch an instance.
+- It can be customized and published, registered or deregistered on Marketplaces open sourced.
 
 ## AWS Storage Services
 
