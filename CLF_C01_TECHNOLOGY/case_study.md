@@ -386,6 +386,81 @@ _Classic Load Balancer_
 
 ## AWS Storage Services
 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5841dd11-1331-4380-bbcf-c3671c51d426)  
+
+
+**S3 (Amazon Simple Storage Service)**
+- Scale storage resources to meet fluctuating needs with 99.999999999% (11 9s) of data durability.
+- Protect your data with unmatched security, compliance, and audit capabilities.
+- object storage service offering industry-leading scalability, data availability, security, and performance.
+- Amazon S3 is the best place to build data lakes because of its unmatched durability, availability, scalability, security, compliance, and audit capabilities.
+- provides strong read-after-write consistency for PUT and DELETE requests of objects in your Amazon S3 bucket in all AWS Regions.
+
+_S3 storage classes_
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/9080c265-6b53-414d-9d60-02c8e94fb92b)   
+
+_storage management_
+- S3 Lifecycle – Configure a lifecycle configuration to manage your objects and store them cost effectively throughout their lifecycle.
+- S3 Object Lock – Prevent Amazon S3 objects from being deleted or overwritten for a fixed amount of time or indefinitely.
+- S3 Replication – Replicate objects and their respective metadata and object tags to one or more destination buckets
+- S3 Batch Operations – Manage billions of objects at scale with a single S3 API request or a few clicks in the Amazon S3 console
+
+_How it works_
+- An object is a file and any metadata that describes the file. A bucket is a container for objects.
+- To store your data in Amazon S3, you first create a bucket and specify a bucket name and AWS Region. Then, you upload your data to that bucket as objects in Amazon S3. Each object has a key (or key name), which is the unique identifier for the object within the bucket.
+- Every object is contained in a bucket. For example, if the object named photos/puppy.jpg is stored in the DOC-EXAMPLE-BUCKET bucket in the US West (Oregon) Region, then it is addressable by using the URL https://DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com/photos/puppy.jpg   
+DOC-EXAMPLE-BUCKET is the name of the bucket and photos/puppy.jpg is the key.
+- can have up to 100 buckets in your account
+- Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket. You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+- Individual Amazon S3 objects can range in size from a minimum of 0 bytes to a maximum of 5 TB. The largest object that can be uploaded in a single PUT is 5 GB.
+- The total volume of data and number of objects you can store in Amazon S3 are unlimited.
+
+**Amazon S3 Glacier**
+- Amazon S3 Glacier (S3 Glacier) is a secure and durable service for low-cost data archiving and long-term backup.
+- S3 Glacier is a REST-based web service. In terms of REST, vaults and archives are the resources.
+- In S3 Glacier, a vault is a container for storing archives. A vault is similar to an Amazon S3 bucket.
+- An archive can be any data, such as a photo, video, or document. An archive is similar to an Amazon S3 object, and is the base unit of storage in S3 Glacier.
+- ex. https://region-specific-endpoint/account-id/vaults/vault-name/archives/archive-id
+- Retrieving archives and vault inventories (lists of archives) are asynchronous operations in S3 Glacier, in which you first initiate a job, and then download the job output after S3 Glacier completes the job.
+- Because jobs take time to run, S3 Glacier supports a notification mechanism to notify you when a job is completed. You can configure a vault to send a notification to an Amazon Simple Notification Service (Amazon SNS) topic when a job is completed.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/1f2ac5eb-a45d-4c50-b56f-c288787088de)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/95ab3c3b-df06-4e86-a16d-e65a86fcbf53)   
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/4f22ebd5-344e-4a83-9358-63192bad49e7)    
+
+**Amazon Elastic Block Store (Amazon EBS)**
+- block level storage volumes for use with EC2 instances. EBS volumes behave like raw, unformatted block devices. You can mount these volumes as devices on your instances.
+- EBS volumes that are attached to an instance are exposed as storage volumes that persist independently from the life of the instance.
+- EBS volumes are particularly well-suited for use as the primary storage for file systems, databases, or for any applications that require fine granular updates and access to raw, unformatted, block-level storage.
+- Block storage provides low latency and high-performance values in various use cases. Its features are primarily useful for structured database storage, VM file system volumes, and high volumes of read and write loads. Object storage is best used for large amounts of unstructured data, especially when durability, unlimited storage, scalability, and complex metadata management are relevant factors for overall performance.
+- Run relational or NoSQL databases: Oracle, Microsoft SQL Server, PostgreSQL, MySQL, Cassandra, and MongoDB etc...
+- Right-size your big data analytics engines : Hadoop, Spark etc..
+- Attach high-performance and high-availability block storage for mission-critical applications, on-premises storage area network (SAN workloads)
+- EBS volumes: SSD, HDD etc....
+- EBS snapshots:  You can back up the data on your Amazon EBS volumes to Amazon S3 by taking point-in-time snapshots. Snapshots are incremental backups, which means that only the blocks on the device that have changed after your most recent snapshot are saved.
+- 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/be64b5b0-ebc5-4569-b3c5-8d736654e7e1)  
+
+**Amazon Elastic File System (EFS)**
+- Amazon Elastic File System (EFS) automatically grows and shrinks as you add and remove files with no need for management or provisioning.
+- managed file system designed for 99.999999999 percent (11 9s) durability and up to 99.99 percent (4 9s) of availability.
+- Simplify persistent storage for modern content management system (CMS) workloads.
+- Persist and share data from your AWS containers and serverless applications with zero
+management required.
+- Powerful combination of lambda serverless with EFS.
+- Stateful microservices, allowing data to persist application state.
+- Amazon Elastic File Service (EFS) is the solution you can use to provide users with NFS capabilities.
+
+**Amazon S3 File Gateway**
+- Store and access objects in Amazon S3 from NFS or SMB file data with local caching   
+- File gateway, FsX file gateway, Tape gateway, Volume gateway
+- 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/0438ce41-073c-407a-875f-3c7e7d35b6cd)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5e47f302-631d-4fa2-ad18-7d8fae42ac84)   
+
+
+
 ## AWS Networking Services
 
 ## AWS Databases Services
