@@ -548,3 +548,65 @@ Multivalue answer routing policy – Use when you want Route 53 to respond to DN
 Weighted routing policy – Use to route traffic to multiple resources in proportions that you specify.    
 
 ## AWS Databases Services
+
+- AWS Database Migration Service (AWS DMS) is a managed migration and replication service that helps move your database and analytics workloads to AWS quickly, securely, and with minimal downtime and zero data loss.
+
+**INSTALLED DATABASES ON EC2 VS MANAGED DATABASES**
+- Amazon RDS enables you to run a fully featured relational database while offloading database administration. Whereas, for more control and flexibility, EC2 will be better for your relational database.
+- The entire process of configuration, management, maintenance, and security is automated by AWS. RDS is easy to set up, cost-effective and allows you to focus on more important tasks.
+- EC2 gives you full control over your database, OS and software stack. It allows you to hire your own database administrators. 
+- Security (data at Rest, and at transit), Availibility, automated backups (snapshots), scalibility and performance comes out of the box with RDS, with EC2 everything has to be configured.
+- Compatibility: RDS supports Aurora, SQL Server, MySQL, MariaDB, PostgreSQL, and Oracle. With EC2, you can configure any database you want.
+- Preferred for EC2 reasons: More control on the configuration, High Performance: It allows you to exceed your maximum database size and performance needs.
+
+**RDS**
+- Deploy and scale the relational database engines of your choice in the cloud or on-premises.
+- Achieve high availability with Amazon RDS Multi-AZ deployments.
+- Amazon RDS database instances are preconfigured with parameters and settings appropriate for the engine and class you have selected.
+- In a few steps, Blue/Green Deployments create a staging environment that mirrors the production environment and keeps the two environments in sync using logical replication
+- The AWS Nitro System makes RDS Optimized Writes possible.
+- When your RDS for MySQL database uses RDS Optimized Writes, it can achieve up to two times higher write transaction throughput.
+- An RDS for MariaDB DB instance that uses RDS Optimized Reads can achieve up to 2x faster query processing compared to a DB instance that doesn't use it.
+- A DB instance is an isolated database environment running in the cloud. It is the basic building block of Amazon RDS. A DB instance can contain multiple user-created databases.
+- Blue/green deployment: A blue/green deployment creates a staging environment that copies the production environment. In a blue/green deployment, the blue environment is the current production environment. The green environment is the staging environment. The staging environment stays in sync with the current production environment using logical replication.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/519b7914-cd76-40fb-a179-0353dc95f7cc)  
+- Read Replicas make it easier to elastically scale out beyond the capacity constraints of a single DB instance for read-heavy database workloads. 
+- By default, Amazon RDS creates and saves automated backups of your DB instance securely in Amazon S3 for a user-specified retention period.
+- In an Amazon RDS Multi-AZ deployment, Amazon RDS automatically creates a primary database (DB) instance and synchronously replicates the data to an instance in a different AZ. When it detects a failure, Amazon RDS automatically fails over to a standby instance without manual intervention.
+- Multi-Az: Two types: one standby replica, two standby replicas 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e91d3802-8813-4296-bbac-aa524c546877)    
+
+- Amazon RDS allows you to encrypt your databases using keys you manage through AWS Key Management Service (KMS). Amazon RDS supports the use of SSL to secure data in transit.
+- Amazon RDS provides Amazon CloudWatch metrics for your database instances.
+
+
+_Amazon Aurora_
+- Power performance-intensive applications and critical workloads while maintaining full compatibility with MySQL and PostgreSQL
+- Aurora gives you the performance and availability of commercial-grade databases at one-tenth the cost.
+- 5x faster than mysql, 3x faster than postgresql
+- Amazon Aurora provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication  
+
+**DYNAMODB**
+- Fast, flexible NoSQL database service for single-digit millisecond performance at any scale
+- Create data schemas and tables in DynamoDB using sample data model templates and datasets available in NoSQL Workbench.
+- Use PartiQL, a SQL-compatible query language, to query, insert, update, and delete table data in DynamoDB.
+- DynamoDB supports both key-value and document data models. This enables DynamoDB to have a flexible schema, so each row can have any number of columns at any point in time.
+- DynamoDB Accelerator (DAX) is an in-memory cache that delivers fast read performance: taking the time required for reads from milliseconds to microseconds
+- DynamoDB provides native, server-side support for transactions
+- DynamoDB supports high-traffic, extreme-scaled events and can handle millions of queries per second.
+
+**REDSHIFT**
+- Best price-performance for cloud data warehousing
+- Amazon Redshift uses SQL to analyze structured and semi-structured data across data warehouses, operational databases, and data lakes
+- Run and scale analytics in seconds on all your data without having to manage your data warehouse infrastructure.
+- Query editor to run queries and share it across team members 
+- Build insight-driven reports and dashboards using Amazon QuickSight, Tableau, Microsoft PowerBI, or other business intelligence tools.
+- Amazon Redshift also is optimized for high-performance batch analysis and reporting of datasets.
+- Cluster – The core infrastructure component of an Amazon Redshift data warehouse is a cluster. A cluster is composed of one or more compute nodes. The compute nodes run the compiled code. he leader node handles external communication with applications, such as business intelligence tools and query editors.
+- Database – A cluster contains one or more databases. User data is stored in one or more databases on the compute nodes. Your SQL client communicates with the leader node, which in turn coordinates running queries with the compute nodes.
+
+_data ingestion layer_: different types of data sources continuously upload structured, semistructured, or unstructured data to the data storage layer.
+_data processing layer_: the source data goes through preprocessing, validation, and transformation using extract, transform, load (ETL) or extract, load, transform (ELT) pipelines
+_data consumption layer_: data is loaded into your Amazon Redshift cluster, where you can run analytical workloads.
