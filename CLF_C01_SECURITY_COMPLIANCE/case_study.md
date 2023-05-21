@@ -184,7 +184,7 @@ Protect your web applications from common exploits	AWS Web Application Firewall 
 
 Filter and control outbound DNS traffic for your VPCs	Amazon Route 53 Resolver DNS Firewall
 
-Data protection	Discover and protect your sensitive data at scale	Amazon Macie
+Data protection	Discover and protect your sensitive data at scale	_Amazon Macie_
 - machine learning (ML) and pattern matching to discover and help protect your sensitive data.
 
 Create and control keys to encrypt or digitally sign your data	AWS Key Management Service (AWS KMS)
