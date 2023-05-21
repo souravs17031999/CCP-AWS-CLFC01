@@ -34,6 +34,22 @@ _AWS CodeCommit_
 - Makes it easy for companies to host secure and highly scalable private Git repositories.
 - Maintain your repositories close to your build, staging, and production environments on AWS.
 
+_AWS  CodeBuild_
+- You just specify the location of your source code and choose your build settings, and CodeBuild will run your build scripts for compiling, testing, and packaging your code.
+- Automate continuous integration and delivery (CI/CD) pipelines
+
+_AWS  CodeDeploy_
+- Automate and consistently deploy your applications  across your development, test, and production environments.
+- Support multiple deployment types, including in-place, canary, and blue/green deployments.
+
+_AWS  CodePipeline_
+- AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates.
+- Update existing pipelines and provide templates for creating new pipelines with a declarative JSON document.
+
+_AWS  CodeStar_
+- AWS CodeStar enables you to quickly develop, build, and deploy applications on AWS. AWS CodeStar provides a unified user interface, enabling you to easily manage your software development activities in one place. 
+- With AWS CodeStar, you can set up your entire continuous delivery toolchain in minutes, allowing you to start releasing code faster.   
+
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/b90c0c37-70f9-4923-848a-524836994f90)  
 
 -----------------------------------------------------------------------------------------------------------------   
@@ -265,6 +281,59 @@ _Accelerated Computing_
 - Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing
 - ex. Machine learning, high performance computing, computational fluid dynamics, computational finance, seismic analysis, speech recognition, autonomous vehicles, and drug discovery.
 
+### Analytics
+**Amazon Athena**
+- Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+- Analyze data or build applications from an Amazon Simple Storage Service (S3) data lake and 30 data sources, including on-premises data sources or other cloud systems using SQL or Python.
+- Analyze petabyte-scale data where it lives with ease and flexibility
+
+**Amazon Kinesis**
+- Collect, process, and analyze real-time video and data streams
+- Build apps for application monitoring, fraud detection, and live leaderboards. Analyze data and emit the results to any data store or application.
+- Perform real-time analytics on data that has been traditionally analyzed using batch processing.
+- Process streaming data from IoT devices, and then use the data to programmatically send real-time alerts and respond when a sensor exceeds certain operating thresholds.
+
+## Application integration
+
+**Amazon SNS (Simple Notification service)**
+- Fully managed Pub/Sub service
+- Deliver application-to-application (A2A) notifications to integrate and decouple distributed applications.
+- Distribute application-to-person (A2P) notifications to your customers with SMS texts, push notifications, and email.
+- Push mechanism
+
+**Amazon SQS (Simple Queue service)**
+- Fully managed message queuing for microservices
+- Separate frontend from backend systems, such as in a banking application. Customers immediately get a response, but the bill payments are processed in the background.
+- Amazon SQS provides a simple and reliable way for customers to decouple and connect components (microservices) together using queues.
+- Pull mechanism
+
+## Customer Engagement
+**Amazon Connect**  
+- Provide superior customer service at a lower cost with an easy-to-use cloud contact center
+- Set up a cloud contact center in just a few clicks and onboard agents to help customers right away.
+- Improve agent productivity and customer experience across voice and digital channels with the all-in-one, AI- and ML-powered contact center.
+
+## Management, Monitoring, and Governance:
+**Amazon EventBridge**
+- Easily build loosely coupled, event-driven architectures to help you deploy new features faster.  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/f8b819e7-6893-4d2d-b469-a736a38ee0b2)  
+
+**AWS License Manager**
+- License Manager makes it easier for you to manage your software licenses from vendors, such as Microsoft, SAP, Oracle, and IBM, across AWS and your on-premises environments.
+- Switch between license types and automate the discovery, tracking, and reporting of existing licenses.
+- Automate the distribution and activation of software entitlements and workloads across AWS accounts for end users.
+
+**AWS Secrets Manager**
+- Centrally manage the lifecycle of secrets
+- AWS Secrets Manager helps you manage, retrieve, and rotate database credentials, API keys, and other secrets throughout their lifecycles.
+
+**AWS systems manager**
+- Improve visibility and control in the cloud, on premises, and at the edge.
+- Shorten the time to detect and resolve operational issues.
+- Automate configuration and ongoing management of your applications and resources.
+- AWS Systems Manager Parameter Store: provides secure, hierarchical storage for configuration data management and secrets management. You can store data such as passwords, database strings, Amazon Machine Image (AMI) IDs, and license codes as parameter values. You can store values as plain text or encrypted data. 
+
 ### Instances (virtual machines)
 
 **EC2 (Amazon Elastic Compute Cloud)**
@@ -367,6 +436,10 @@ _Classic Load Balancer_
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/40434a2a-9068-4d16-9875-10bd21ee426e)  
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/8260f2f7-a30a-4b58-805c-3b3659e5bbef)  
 
+**Amazon WorkSpaces**
+- Amazon WorkSpaces is a fully managed desktop virtualization service for Windows, Linux, and Ubuntu, that allows you to access resources from any supported device.  
+- Facilitate remote work, learning environments for students and educators   
+- Allow devs to test quickly their code across multiple environments 
 
 ### Edge and Hybrid
 
@@ -547,6 +620,11 @@ Multivalue answer routing policy – Use when you want Route 53 to respond to DN
 
 Weighted routing policy – Use to route traffic to multiple resources in proportions that you specify.    
 
+**Amazon API Gateway**
+- APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services.
+- fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale
+- you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications.
+
 ## AWS Databases Services
 
 - AWS Database Migration Service (AWS DMS) is a managed migration and replication service that helps move your database and analytics workloads to AWS quickly, securely, and with minimal downtime and zero data loss.
@@ -610,6 +688,11 @@ _Amazon Aurora_
 _data ingestion layer_: different types of data sources continuously upload structured, semistructured, or unstructured data to the data storage layer.
 _data processing layer_: the source data goes through preprocessing, validation, and transformation using extract, transform, load (ETL) or extract, load, transform (ELT) pipelines
 _data consumption layer_: data is loaded into your Amazon Redshift cluster, where you can run analytical workloads.  
+
+**Amazon ElastiCache** 
+- Realize microsecond response times across hundreds of millions of operations per second and up to 1 pebibyte of data
+- Achieve cost-optimized performance by adding a cache for frequently read data to optimize resources and lower total cost of ownership
+- Build applications quickly using popular open-source technologies, Redis and Memcached  
 
 ----------------------------------------------------------------------------------------------------------------------------  
 
