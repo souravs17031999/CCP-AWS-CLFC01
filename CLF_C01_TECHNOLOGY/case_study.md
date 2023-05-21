@@ -609,4 +609,47 @@ _Amazon Aurora_
 
 _data ingestion layer_: different types of data sources continuously upload structured, semistructured, or unstructured data to the data storage layer.
 _data processing layer_: the source data goes through preprocessing, validation, and transformation using extract, transform, load (ETL) or extract, load, transform (ELT) pipelines
-_data consumption layer_: data is loaded into your Amazon Redshift cluster, where you can run analytical workloads.
+_data consumption layer_: data is loaded into your Amazon Redshift cluster, where you can run analytical workloads.  
+
+----------------------------------------------------------------------------------------------------------------------------  
+
+## technology support
+
+- there is documentation (best practices, whitepapers, AWS Knowledge Center, forums, blogs
+- includes AWS Official Knowledge Center articles and videos covering the most frequent questions and requests that we receive from AWS customers.
+
+**AWS Support**   
+- The AWS Trust & Safety team can assist you when AWS resources are implicated in the following abuse types:
+- Web content/non-copyright intellectual property that's objectionable content hosted on an AWS resource
+- Email abuse that's an abusive email sent from an AWS resource or spam content hosted on, or sent from an AWS resource.
+- Network activity that's originating from an AWS resource that causes problematic network traffic. This can be an intrusion attempt, denial-of-service (DoS) attack, port scanning, or any other abusive network activity.
+- Copyright that's subject to content removal requests regarding the Digital Millennium Copyright Act.
+
+In the AWS Management Console, you can create three types of customer cases in AWS Support:
+- Account and billing
+- Service limit increase requests are available to all AWS customers
+- Technical support cases connect you to technical support for help with service-related technical issues 
+
+**AWS premium support**:   
+- A Technical Account Manager (TAM) provides consultative architectural and operational guidance delivered in the context of your applications and use-cases to help you achieve the greatest value from AWS. The TAM will work with you to provide tailored engagements including strategic Business Reviews, Security Improvement Programs, guided Well-Architected reviews, Cost Optimization workshops, and a range of proactive services.
+- Get expert guidance and assistance achieving your objectives
+
+**Types of Support plans**:   
+- Developer: Recommended if you are experimenting or testing in AWS. Business hours** web access to Cloud Support Associates. System impaired: < 12 hours**
+- Business: Minimum recommended tier if you have production workloads in AWS. 24/7 phone, web, and chat access to Cloud Support Engineers. Production system down: < 1 hour
+- Enterprise on-ramp: Recommended if you have production and/or business critical workloads in AWS. 24/7 phone, web, and chat access to Cloud Support Engineers. Business-critical system down: < 30 minutes. Technical Account Management	
+- Enterprise: Recommended if you have business and/or mission critical workloads in AWS. 24/7 phone, web, and chat access to Cloud Support Engineers. Business/Mission-critical system down: < 15 minutes. Access to AWS Incident Detection and Response for an additional fee. Technical Account Management	
+
+**AWS Partner network**   
+- The AWS Partner Network (APN) is a global community of partners that leverages programs, expertise, and resources to build, market, and sell customer offerings.
+- As an AWS Partner, you are uniquely positioned to help customers take full advantage of all that AWS has to offer and accelerate their journey to the cloud.
+- Independent Software Vendors (ISVs) and Channel Partners can take advantage of AWS Marketplace Channel features and enablement to build a scalable Marketplace business with AWS
+- AWS Marketplace is a curated digital catalog that customers can use to find, buy, deploy, and manage third-party software, data, and services to build solutions and run their businesses
+- You can use AWS Marketplace as a buyer (subscriber), seller (provider), or both.
+
+**AWS Trusted Advisor**   
+- AWS Trusted Advisor provides recommendations that help you follow AWS best practices.  
+- These checks identify ways to optimize your AWS infrastructure, improve security and performance, reduce costs, and monitor service quotas
+- AWS Basic Support and AWS Developer Support customers can access core security checks and checks for service quotas. AWS Business Support and AWS Enterprise Support customers can access all checks, including cost optimization, security, fault tolerance, performance, and service quotas.
+- 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/b386ad36-ad21-4b88-b1f4-15c3968f9c71)   
