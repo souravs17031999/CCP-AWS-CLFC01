@@ -125,7 +125,7 @@ The business value of migrating to AWS to learn how migrating on-premises infras
 20% cost savings in technology infrastructure  
 29% increase in staff focus on innovation  
 
-* TCO MIGRATION   
+## TCO MIGRATION   
 
 Migration Evaluator  
 Migration Evaluator (formerly TSO Logic) is a complimentary service to create data-driven business cases for AWS Cloud planning and migration.  
@@ -149,7 +149,8 @@ AWS Architecture Center : web portal for Reference architecture examples and dia
 
 **The pillars of the framework      
 ### Operational excellence      
-- Perform operations as code: You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their run process by initiating them in response to events.    
+* Bullet list
+    * Nested bullet
 - Make frequent, small, reversible changes: Design workloads to permit components to be updated regularly.    
 - Refine operations procedures frequently: Set up regular game days to review and validate that all procedures are effective and that teams are familiar with them.   
 - Anticipate failure: Perform “pre-mortem” exercises to identify potential sources of failure so that they can be removed or mitigated.    
