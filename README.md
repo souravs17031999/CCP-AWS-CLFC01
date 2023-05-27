@@ -1,8 +1,8 @@
 # CCP-AWS-CLFC01
 
 # Summary of all AWS services  
+![aws drawio](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/d0196c30-db48-48da-bed2-890037b2fadb)    
 
-![aws](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c1332aa0-748a-4bc2-a3be-1dc6265f299e) 
 
 # CLOUD CONCEPTS   
 
@@ -155,23 +155,50 @@ AWS Pricing Calculator is a web-based service that you can use to create cost es
 AWS Architecture Center : web portal for Reference architecture examples and diagrams   
 
 
-**The pillars of the framework      
+**The pillars of the framework  (WELL ARCHITECHTED FRAMEWORK)    
 ### Operational excellence      
 * Perform operations as code: You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their run process by initiating them in response to events.
     * Use version control: Maintain assets in version controlled repositories. Doing so supports tracking changes, deploying new versions, detecting changes to existing versions, and reverting to prior versions
     * Fully automate the integration and deployment pipeline from code check-in through build, testing, deployment, and validation. This reduces lead time, encourages increased frequency of change, and reduces the level of effort.  
-- Make frequent, small, reversible changes: Design workloads to permit components to be updated regularly.    
+- Make frequent, small, reversible changes: Design workloads to permit components to be updated regularly. 
+    * Plan for unsuccessful changes: Plan to revert to a known good state (that is, roll back the change), or remediate in the production environment 
+    * Test changes and validate the results at all lifecycle stages to confirm new features and minimize the risk and impact of failed deployments. 
+    * Test with limited deployments alongside existing systems to confirm desired outcomes prior to full scale deployment. For example, use deployment canary testing or one-box deployments.
+    * Rolling updates – Elastic Beanstalk applies your configuration changes in batches, keeping a minimum number of instances running and serving traffic at all times. Immutable updates – Elastic Beanstalk launches a temporary Auto Scaling group outside of your environment with a separate set of instances running with the new configuration. Disabled – Elastic Beanstalk makes no attempt to avoid downtime. It terminates your environment's existing instances and replaces them with new instances running with the new configuration.
 - Refine operations procedures frequently: Set up regular game days to review and validate that all procedures are effective and that teams are familiar with them.   
+    * Use Operational Readiness Reviews (ORRs) to validate that you can operate your workload.
+    * ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/716f325b-f8b3-417b-8419-8cd62b8e7633)     
+    * In cloud operations, we use runbooks to reduce risk and achieve desired outcomes. At its simplest, a runbook is a checklist to complete a task.
 - Anticipate failure: Perform “pre-mortem” exercises to identify potential sources of failure so that they can be removed or mitigated.    
 - Learn from all operational failures: Drive improvement through lessons learned from all operational events and failures.      
+    * Define escalation paths for the teams that support your workload, especially if the team doesn’t have an on-call rotation. Based on your support level, you can also file a case with AWS Support.
+    * As a first line of defense, web and mobile applications should provide friendly and informative error messages during an outage as well as have the ability to redirect traffic to a status page.
+    * Communicate status through dashboards: Provide dashboards tailored to their target audiences (for example, internal technical teams, leadership, and customers) to communicate the current operating status of the business and provide metrics of interest.
 ### Security     
 - Implement a strong identity foundation: Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources.   
+    * As your teams determine what access is required, remove unneeded permissions and establish review processes to achieve least privilege permissions. 
+    * multi-account strategy: Account-level separation is strongly recommended, as it provides a strong isolation boundary for security, billing, and access.
+    * Securing the root user helps reduce the chance that accidental or intentional damage can occur through the misuse of root user credentials.
+    * Stay up-to-date with both AWS and industry security recommendations to evolve the security posture of your workload. AWS Security Bulletins contain important information about security and privacy notifications.
 - Maintain traceability: Monitor, alert, and audit actions and changes to your environment in real time. Integrate log and metric collection with systems to automatically investigate and take action.    
 - Apply security at all layers: Apply a defense in depth approach with multiple security controls   
+   * Don't put all resources in single VPC. Use multi-layered approach and check which resources needs internet access and which not.
+   * Control traffic at all layers: VPC's, At edge etc...
+   * Harden operating system: Configure operating systems to meet best practices. Harden security in all code to reduce attack surface.
+   * Investigate mechanisms: Code signing is one mechanism that can be used to validate software integrity.
 - Automate security best practices: Automated software-based security mechanisms improve your ability to securely scale more rapidly and cost-effectively.    
+   * Perform threat modeling to identify and maintain an up-to-date register of potential threats and associated mitigations for your workload.
+   *  Shostack’s 4 Question Frame for Threat Modeling: What are we working on ? What can go wrong ? What can we do about it ? Did we do a great Job ?
 - Protect data in transit and at rest: Classify your data into sensitivity levels and use mechanisms, such as encryption, tokenization, and access control where appropriate.   
+   * Data classification allows workload owners to identify locations that store sensitive data and determine how that data should be accessed and shared.
+   * Encryption maintains the confidentiality of sensitive data in the event of unauthorized access or accidental disclosure.
+   * All data should be encrypted in transit using secure TLS protocols and cipher suites. Network traffic between your resources and the internet must be encrypted to mitigate unauthorized access to the data.
 - Keep people away from data: Use mechanisms and tools to reduce or eliminate the need for direct access or manual processing of data. This reduces the risk of mishandling or modification and human error when handling sensitive data.    
+   * Avoiding the use of long-term credentials in favor of temporary credentials should go hand in hand with a strategy of reducing the usage of IAM users in favor of federation and IAM roles.
+   * Implement a user access lifecycle policy for new users joining, job function changes, and users leaving so that only current users have access.
 - Prepare for security events: Prepare for an incident by having incident management and investigation policy and processes that align to your organizational requirements.     
+   * A process that allows emergency access to your workload in the unlikely event of an automated process or pipeline issue. This will help you rely on least privilege access, but ensure users can obtain the right level of access when they require it. 
+   * An organization should be able to reliably and consistently retrieve security event logs from AWS services and applications in a timely manner when required to fulfill an internal process or obligation, such as a security incident response.
 ### Reliability       
 - Automatically recover from failure: By monitoring a workload for key performance indicators (KPIs), you can start automation when a threshold is breached.     
 - Test recovery procedures: In an on-premises environment, testing is often conducted to prove that the workload works in a particular scenario. Testing is not typically used to validate recovery strategies.    
