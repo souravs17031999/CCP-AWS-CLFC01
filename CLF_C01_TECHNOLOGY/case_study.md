@@ -524,9 +524,12 @@ management required.
 - Stateful microservices, allowing data to persist application state.
 - Amazon Elastic File Service (EFS) is the solution you can use to provide users with NFS capabilities.
 
-**Amazon S3 File Gateway**
+**Amazon Storage Gateway**
 - Store and access objects in Amazon S3 from NFS or SMB file data with local caching    
-- File gateway, FsX file gateway, Tape gateway, Volume gateway 
+- File gateway, FsX file gateway, Tape gateway, Volume gateway    
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/69197bb9-8c7c-4b14-99ce-b27a45e1f21b)   
+
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/0438ce41-073c-407a-875f-3c7e7d35b6cd)   
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5e47f302-631d-4fa2-ad18-7d8fae42ac84)   
