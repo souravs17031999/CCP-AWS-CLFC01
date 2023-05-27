@@ -149,8 +149,9 @@ AWS Architecture Center : web portal for Reference architecture examples and dia
 
 **The pillars of the framework      
 ### Operational excellence      
-* Bullet list
-    * Nested bullet
+* Perform operations as code: You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their run process by initiating them in response to events.
+    * Use version control: Maintain assets in version controlled repositories. Doing so supports tracking changes, deploying new versions, detecting changes to existing versions, and reverting to prior versions
+    * Fully automate the integration and deployment pipeline from code check-in through build, testing, deployment, and validation. This reduces lead time, encourages increased frequency of change, and reduces the level of effort.  
 - Make frequent, small, reversible changes: Design workloads to permit components to be updated regularly.    
 - Refine operations procedures frequently: Set up regular game days to review and validate that all procedures are effective and that teams are familiar with them.   
 - Anticipate failure: Perform “pre-mortem” exercises to identify potential sources of failure so that they can be removed or mitigated.    
