@@ -36,6 +36,52 @@ Which AWS service will achieve lower latency and high transfer speeds?
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e30dbf0c-73b5-4d4b-909b-0a255be1fb7d)   
 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e20a8124-eb66-41f4-956e-565b54918c65)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/6107b5ac-61b7-49cd-9eef-e37914e6f487)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/8aac9127-2d0f-4b3b-948e-42782611815c)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/97568334-31cc-4d3f-991c-a237e763bf57)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e7626aee-935d-4121-9b07-f1e8857caf98)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/aec7725d-4bcb-4d53-af08-506a8ab5cf32)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/df56743d-a1b1-4c4a-9863-d9519d46d37e)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/12601226-4757-4ca5-9eb5-bb264893cdaa)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/a06c3a95-6cef-4944-b1d7-f5a48a3da4bd)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/173feec2-05d0-4353-b8bb-d932f5ac2295)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/7a92ada7-4fff-4062-9c8a-b4fb9ac04941)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/485572c9-d024-47a5-9098-d0ac5b29a0b2)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e19471e4-64cc-458e-897e-77470dfff71e)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/8bc5630f-16cc-45b1-93d2-5c7f71d3070a)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/71e53da7-55df-44e9-9c39-8bb5cd325955)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/47b6864e-e04f-4a90-822a-b1dd61a629cf)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
