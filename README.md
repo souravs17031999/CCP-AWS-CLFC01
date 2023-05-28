@@ -161,6 +161,14 @@ AWS Pricing Calculator is a web-based service that you can use to create cost es
 
 AWS Architecture Center : web portal for Reference architecture examples and diagrams   
 
+## Why moving to cloud computing ?
+
+- Trade upfront expense for variable expense: By taking a cloud computing approach that offers the benefit of variable expense, companies can implement innovative solutions while saving on costs.
+- Stop spending money to run and maintain data centers: A benefit of cloud computing is the ability to focus less on these tasks and more on your applications and customers.
+- Stop guessing capacity: For example, you can launch Amazon EC2 instances when needed, and pay only for the compute time you use. Instead of paying for unused resources or having to deal with limited capacity, you can access only the capacity that you need. You can also scale in or scale out in response to demand.
+- Benefit from massive economies of scale: Because usage from hundreds of thousands of customers can aggregate in the cloud, providers, such as AWS, can achieve higher economies of scale. The economy of scale translates into lower pay-as-you-go prices. 
+- Increase speed and agility: This flexibility provides you with more time to experiment and innovate. When computing in data centers, it may take weeks to obtain new resources that you need. By comparison, cloud computing enables you to access new resources within minutes.
+- Go global in minutes: The global footprint of the AWS Cloud enables you to deploy applications to customers around the world quickly, while providing them with low latency. This means that even if you are located in a different part of the world than your customers, customers are able to access your applications with minimal delays. 
 
 ## The pillars of the framework  (WELL ARCHITECHTED FRAMEWORK)    
 ### Operational excellence      
