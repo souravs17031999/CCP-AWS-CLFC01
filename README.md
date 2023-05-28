@@ -201,29 +201,96 @@ AWS Architecture Center : web portal for Reference architecture examples and dia
    * An organization should be able to reliably and consistently retrieve security event logs from AWS services and applications in a timely manner when required to fulfill an internal process or obligation, such as a security incident response.
 ### Reliability       
 - Automatically recover from failure: By monitoring a workload for key performance indicators (KPIs), you can start automation when a threshold is breached.     
+   * Be aware of your default quotas and manage your quota increase requests for your workload architecture. Know which cloud resource constraints, such as disk or network, are potentially impactful.
+   * Check for if the service has any hard limits using Stress testing, load testing, and chaos testing.
+   * Verify that your quotas cover the overlap of failed or inaccessible resources and their replacements. You should consider use cases like network failure, Availability Zone failure, or Regional failures when calculating this gap.
+   * Prefer hub-and-spoke topologies over many-to-many mesh. If more than two network address spaces (VPCs, on-premises networks) are connected via VPC peering, AWS Direct Connect, or VPN, then use a hub-and-spoke model like that provided by AWS Transit Gateway.
+   * An idempotent service makes it easier for a client to implement retries without fear that a request will be erroneously processed multiple times.    
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/edd2569c-e739-4201-bb00-ce0c6ef816b4)    
+
+   * Implement graceful degradation to transform applicable hard dependencies into soft dependencies. When a component's dependencies are unhealthy, the component itself can still function, although in a degraded manner. For example, when a dependency call fails, failover to a predetermined static response. Ex. circuit breaker pattern etc...
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/db72128a-c20d-4c1f-ae56-7f600aac03ab)  
+   * Throttle requests. This is a mitigation pattern to respond to an unexpected increase in demand. Some requests are honored but those over a defined limit are rejected and return a message indicating they have been throttled.
+   * Control and limit retry calls. Use exponential backoff to retry after progressively longer intervals. Introduce jitter to randomize those retry intervals, and limit the maximum number of retries.
+   * If the workload is unable to respond successfully to a request, then fail fast. This allows the releasing of resources associated with a request, and permits the service to recover if it’s running out of resources. Limit queues In a queue-based system, when processing stops but messages keep arriving, the message debt can accumulate into a large backlog, driving up processing time.
+   * Set both a connection timeout and a request timeout on any remote call, and generally on any call across processes.
+
 - Test recovery procedures: In an on-premises environment, testing is often conducted to prove that the workload works in a particular scenario. Testing is not typically used to validate recovery strategies.    
-- Scale horizontally to increase aggregate workload availability: Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload.     
+   * Validate that your backup process implementation meets your Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) by performing a recovery test.
+   * ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/b26e0c77-0eb7-4361-a207-05647eea1348)  
+   * ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/f390cab7-2fb9-4de7-a098-2ba91f1e1d8a)   
+
+- Scale horizontally to increase aggregate workload availability: Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload.  
+   *  Services should either not require state, or should offload state such that between different client requests, there is no dependence on locally stored data on disk and in memory. This allows servers to be replaced at will without causing an availability impact.
+   ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/2adc60e8-32bc-4f16-b44a-f5322a9a7621)  
+   
+   * After examining whether the state is required, move any state tracking to a resilient multi-zone cache or data store like Amazon ElastiCache, Amazon RDS, Amazon DynamoDB, or a third-party distributed data solution.   
 - Stop guessing capacity: A common cause of failure in on-premises workloads is resource saturation, when the demands placed on a workload exceed the capacity of that workload    
-- Manage change in automation: Changes to your infrastructure should be made using automation.      
+   * AWS Auto Scaling lets you detect and replace impaired instances. It also lets you build scaling plans for resources
+   * Amazon EC2 Auto Scaling helps you ensure that you have the correct number of Amazon EC2 instances available to handle the load for your application.
+   * Amazon DynamoDB auto scaling uses the AWS Application Auto Scaling service to dynamically adjust provisioned throughput capacity on your behalf, in response to actual traffic patterns.
+- Manage change in automation: Changes to your infrastructure should be made using automation.
+   * Organizations that need to know, receive notifications when significant events occur. Alerts can be sent to Amazon Simple Notification Service (Amazon SNS) topics, and then pushed to any number of subscribers. For example, Amazon SNS can forward alerts to an email alias so that technical staff can respond.
+   * Integrate functional testing as part of your deployment. Functional tests are run as part of automated deployment. If success criteria are not met, the pipeline is halted or rolled back.
+   * ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/702f72e9-5e66-47cb-a93a-75131e3795be)    
+
+single-AZ resiliency:     
+   * 2 9s (99%) scenario, 3 9s (99.9%) scenario, 4 9s (99.99%) scenario   
+Multi-AZ resiliency:   
+   * 3½ 9s (99.95%) with a Recovery Time between 5 and 30 Minutes, 5 9s (99.999%) or higher scenario with a recovery time under one minute
+     
 ### Performance efficiency      
 - Democratize advanced technologies: Make advanced technology implementation smoother for your team by delegating complex tasks to your cloud vendor.    
+   * Understand the process of techology selection : Use existing workloads for load testing, use reference aws architechtures or help from AWS partner networks or aws solution architects etc...
 - Go global in minutes: Deploying your workload in multiple AWS Regions around the world permits you to provide lower latency and a better experience for your customers at minimal cost.   
 - Use serverless architectures: Serverless architectures remove the need for you to run and maintain physical servers for traditional compute activities.   
 - Experiment more often: With virtual and automatable resources, you can quickly carry out comparative testing using different types of instances, storage, or configurations.   
-- Consider mechanical sympathy: Understand how cloud services are consumed and always use the technology approach that aligns with your workload goals.   
+   * To optimize performance, overall efficiency, and cost effectiveness, determine first which resources your workload needs. Choose memory-optimized instances, such as the R-family of instances, for memory-intensive workloads like a database. For workloads that require higher compute capacity, choose the C-family of instances, or choose instances with higher core counts or higher core frequency. Choose I/O performance based on the needs of your workload instead of comparing against standard, synthetic benchmarks. For higher I/O performance, choose instances from the I-family of instances.
+   * Collect compute-related metrics over time. Compare workload metrics against available resources.
+- Consider mechanical sympathy: Understand how cloud services are consumed and always use the technology approach that aligns with your workload goals.  
+   * Use a data-driven approach to evolve your architecture: As you make changes to the workload, collect and evaluate metrics to determine the impact of those changes. Measure the impacts to the system and to the end-user to understand how your tradeoffs impact your workload. Use a systematic approach, such as load testing, to explore whether the tradeoff improves performance.   
+ 
 ### Cost optimization     
 - Implement Cloud Financial Management: To achieve financial success and accelerate business value realization in the cloud, invest in Cloud Financial Management and Cost Optimization.   
+   * Establish a Cloud Business Office (CBO) or Cloud Center of Excellence (CCOE) team that is responsible for establishing and maintaining a culture of cost awareness in cloud computing.
+   * Report cloud costs to technology teams: To raise cost awareness, and establish efficiency KPIs for finance and business stakeholders.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/76aeed90-575c-429e-a54a-428526325301)   
+
 - Adopt a consumption model: Pay only for the computing resources that you require and increase or decrease usage depending on business requirements, not by using elaborate forecasting.   
+   * AWS has multiple pricing models that allow you to pay for your resources in the most cost-effective way that suits your organization’s needs and depending on product. Work with your teams to determine the most appropriate pricing model.   
 - Measure overall efficiency: Measure the business output of the workload and the costs associated with delivering it.   
 - Stop spending money on undifferentiated heavy lifting: AWS does the heavy lifting of data center operations like racking, stacking, and powering servers.   
 - Analyze and attribute expenditure: The cloud makes it simple to accurately identify the usage and cost of systems, which then permits transparent attribution of IT costs to individual workload owners.      
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/63a94a97-1d29-4698-8a63-cc386df1bc18)   
+   * Decommission workload resources that are no longer required. A common example is resources used for testing: after testing has been completed, the resources can be removed. Example values for feature tagging are feature-X testing to identify the purpose of the resource in terms of the workload lifecycle. Another example is using LifeSpan or TTL for the resources, such as to-be-deleted tag key name and value to define the time period or specific time for decommissioning.
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/8645232d-7488-4d2e-b08d-5a912e83c360)  
+
+
+
 ### Sustainability       
 - Understand your impact: Measure the impact of your cloud workload and model the future impact of your workload.   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/86b81535-d386-4942-b154-b8a09a3d1dfa)   
+
 - Establish sustainability goals: For each cloud workload, establish long-term sustainability goals such as reducing the compute and storage resources required per transaction.   
 - Maximize utilization: Right-size workloads and implement efficient design to verify high utilization and maximize the energy efficiency of the underlying hardware.    
+   * Adding sustainability to your list of business requirements can result in more cost-effective solutions. Focusing on getting more value from the resources you use and using fewer of them directly translates to cost savings on AWS as you pay only for what you use.
 - Anticipate and adopt new, more efficient hardware and software offerings: Support the upstream improvements your partners and suppliers make to help you reduce the impact of your cloud workloads.   
 - Use managed services: Sharing services across a broad customer base helps maximize resource utilization, which reduces the amount of infrastructure needed to support cloud workloads.    
 - Reduce the downstream impact of your cloud workloads: Reduce the amount of energy or resources required to use your services.      
+- Best practices:
+   * The AWS Cloud is a constantly expanding network of Regions and points of presence (PoP), with a global network infrastructure linking them together. The choice of Region for your workload significantly affects its KPIs, including performance, cost, and carbon footprint.
+   * Use elasticity of the cloud and scale your infrastructure dynamically to match supply of cloud resources to demand and avoid overprovisioned capacity in your workload.
+   * Review and optimize workload service-level agreements (SLA) based on your sustainability goals to minimize the resources required to support your workload while continuing to meet business needs.
+   * Select cloud location and services for your workload that reduce the distance network traffic must travel and decrease the total network resources required to support your workload.
+   * Leverage serverless on AWS to eliminate over-provisioned infrastructure.
+   * Right size individual components of your architecture to prevent idling resources waiting for input.
+   * Classify data to understand its criticality to business outcomes and choose the right energy-efficient storage tier to store the data.
+   * Use the criticality of your data classification and design backup strategy based on your recovery time objective (RTO) and recovery point objective (RPO). Avoid backing up non-critical data.
+   * Using Managed device farms can help you to streamline the testing process for new features on a representative set of hardware. Managed device farms offer diverse device types including older, less popular hardware, and avoid customer sustainability impact from unnecessary device upgrades.   
 
 # SECURITY AND COMPLIANCE 
 
