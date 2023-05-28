@@ -98,7 +98,7 @@ sustainability metrics
 - 53% reduction in database administration
 - 38% increase in developer productivity associated with database-related tasks  
 
-* AWS Cloud Value Framework  
+**AWS Cloud Value Framework  
 
 ** Cost Savings (TCO)  
 50%+ reduction in TCO.   
@@ -132,6 +132,13 @@ The business value of migrating to AWS to learn how migrating on-premises infras
 69% decrease in unplanned downtime  
 20% cost savings in technology infrastructure  
 29% increase in staff focus on innovation  
+
+**Cloud Adoption Framework (CAF)
+
+The AWS Cloud Adoption Framework (AWS CAF) leverages AWS experience and best practices to help you digitally transform and accelerate your business outcomes through innovative use of AWS.   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5fae6a04-094b-4c50-881f-c0a90e787b92)     
+
 
 ## TCO MIGRATION   
 
