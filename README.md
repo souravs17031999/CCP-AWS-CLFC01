@@ -155,7 +155,7 @@ AWS Pricing Calculator is a web-based service that you can use to create cost es
 AWS Architecture Center : web portal for Reference architecture examples and diagrams   
 
 
-**The pillars of the framework  (WELL ARCHITECHTED FRAMEWORK)    
+## The pillars of the framework  (WELL ARCHITECHTED FRAMEWORK)    
 ### Operational excellence      
 * Perform operations as code: You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their run process by initiating them in response to events.
     * Use version control: Maintain assets in version controlled repositories. Doing so supports tracking changes, deploying new versions, detecting changes to existing versions, and reverting to prior versions
