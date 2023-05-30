@@ -137,7 +137,8 @@ The business value of migrating to AWS to learn how migrating on-premises infras
 
 The AWS Cloud Adoption Framework (AWS CAF) leverages AWS experience and best practices to help you digitally transform and accelerate your business outcomes through innovative use of AWS.   
 
-![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5fae6a04-094b-4c50-881f-c0a90e787b92)     
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5fae6a04-094b-4c50-881f-c0a90e787b92)        
+![test drawio (1)](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/2b5d373c-7bd9-4a35-9ed7-b591682b9041)   
 
 
 ## TCO MIGRATION   
@@ -171,6 +172,9 @@ AWS Architecture Center : web portal for Reference architecture examples and dia
 - Go global in minutes: The global footprint of the AWS Cloud enables you to deploy applications to customers around the world quickly, while providing them with low latency. This means that even if you are located in a different part of the world than your customers, customers are able to access your applications with minimal delays. 
 
 ## The pillars of the framework  (WELL ARCHITECHTED FRAMEWORK)    
+
+![test drawio (2)](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/b8c92a9e-da2b-4baf-a367-de0e2b0b04c5)     
+
 ### Operational excellence      
 * Perform operations as code: You can define your entire workload (applications, infrastructure) as code and update it with code. You can implement your operations procedures as code and automate their run process by initiating them in response to events.
     * Use version control: Maintain assets in version controlled repositories. Doing so supports tracking changes, deploying new versions, detecting changes to existing versions, and reverting to prior versions
@@ -306,6 +310,11 @@ Multi-AZ resiliency:
    * Classify data to understand its criticality to business outcomes and choose the right energy-efficient storage tier to store the data.
    * Use the criticality of your data classification and design backup strategy based on your recovery time objective (RTO) and recovery point objective (RPO). Avoid backing up non-critical data.
    * Using Managed device farms can help you to streamline the testing process for new features on a representative set of hardware. Managed device farms offer diverse device types including older, less popular hardware, and avoid customer sustainability impact from unnecessary device upgrades.   
+
+### SIX R's of Migration
+
+![test drawio (3)](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/0a88c7e9-eb15-4e24-a245-c91fdae5fdc1)   
+
 
 # SECURITY AND COMPLIANCE 
 
