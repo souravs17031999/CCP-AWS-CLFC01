@@ -656,6 +656,10 @@ With the additional statement, users can view the test bucket by using the conso
 
 One of the best ways to protect your account is to not have access keys for your AWS account root user.
 
+**IAM policy structure 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/31a88f25-2fe7-40d3-9599-56e881ac4280)  
+
 ==============================================================
 **AWS TRUSTED ADVISOR 
 
