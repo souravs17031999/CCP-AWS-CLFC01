@@ -74,6 +74,19 @@ Which AWS service will achieve lower latency and high transfer speeds?
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/babcfdf0-14c2-4bb6-8ce0-7bf4698bada5)   
 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/4af245e5-8d2a-4b77-98ec-5c9ec8348675)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/75bb6e1e-d7d3-4c4e-b22f-ca81cb5605d4)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/bf429240-b895-4fb7-8784-12b87d92c874)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/416eaaa9-5e36-422c-a2eb-be791ca6992e)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/524c56f5-2df8-4bd4-a8c0-90abc2809807)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/afbff535-840c-44ec-bd39-c7ccb95b4d11)  
+
+
 
 
 
