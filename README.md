@@ -984,6 +984,11 @@ _Accelerated Computing_
 - Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing
 - ex. Machine learning, high performance computing, computational fluid dynamics, computational finance, seismic analysis, speech recognition, autonomous vehicles, and drug discovery.
 
+### classic PORTS 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c2c5784f-96cd-41e8-93f3-391b76565e65)   
+
+
 ### Analytics
 **Amazon Athena**
 - Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
@@ -1044,6 +1049,26 @@ _Accelerated Computing_
 - Amazon EC2 delivers the broadest for ML projects 
 - 4 9's availability SLA's
 - The AWS Nitro System is the underlying platform for our next generation of EC2 instances: high security
+- When you launch an instance in Amazon EC2, you have the option of passing user data to the instance that can be used to perform common automated configuration tasks and even run scripts after the instance starts. You can pass two types of user data to Amazon EC2: shell scripts and cloud-init directives.
+- When you launch an instance, the root device volume contains the image used to boot the instance. 
+- AMI launch backed by instance store 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/19b740e4-f8d9-4504-b1c1-8e2b6e1e1768)  
+
+- AMI launch EBS-backed instances
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/8fbc4ce3-0567-4058-8fb6-75f644076594)   
+
+- When you attach a volume to your instance, you include a device name for the volume. This device name is used by Amazon EC2. The block device driver for the instance assigns the actual volume name when mounting the volume, and the name assigned can be different from the name that Amazon EC2 uses.
+- Each instance that you launch has an associated root device volume, which is either an Amazon EBS volume or an instance store volume. You can use block device mapping to specify additional EBS volumes or instance store volumes to attach to an instance when it's launched.
+- A block device is a storage device that moves data in sequences of bytes or bits (blocks). These devices support random access and generally use buffered I/O. Examples include hard disks, CD-ROM drives, and flash drives. Ex. Instance store volumes, EBS 
+- A block device mapping defines the block devices (instance store volumes and EBS volumes) to attach to an instance. 
+
+Ex. 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/ee5167db-582e-46c6-805b-c603856fd67d)  
+
+
 
 **EC2 spot instances**
 - Spot Instances are available at up to a 90% discount compared to On-Demand prices.
@@ -1064,6 +1089,8 @@ _Accelerated Computing_
 
 _Application Load Balancer_
 - Routes and load balances at the application layer (HTTP/HTTPS), and supports path-based routing. WAF rules to protect against common attacks.
+- Before you start using your Application Load Balancer, you must add one or more listeners. A listener is a process that checks for connection requests, using the protocol and port that you configure. The rules that you define for a listener determine how the load balancer routes requests to its registered targets.
+- Your load balancer serves as a single point of contact for clients and distributes incoming traffic across its healthy registered targets. You can register each target with one or more target groups.  
 
 _Network Load Balancer_
 - Routes and load balances at the transport layer (TCP/UDP Layer-4), based on address information extracted from the Layer-4 header.
@@ -1155,7 +1182,14 @@ _Classic Load Balancer_
 - providing a simple graphical interface, built-in automation, and AWS-provided security settings. With Image Builder, there are no manual steps for updating an image nor do you have to build your own automation pipeline.
 - validate your images for functionality, compatibility, and security compliance with AWS-provided tests and your own tests before using them in production
 - Examples of secure image with AWS-provided and/or custom templates includes: 1/ Ensure security patches are applied, 2/ Enforce strong passwords, 3/ Turn on full disk encryption, 4/ Close all non-essential open ports, 5/ Enable software firewall, 6/ Enable logging/audit controls.
+- Image Builder uses semantic versioning to organize resources and ensure that they have unique IDs. The semantic version has four nodes: 
+- Image Builder uses the AWS Task Orchestrator and Executor (AWSTOE) component management application to orchestrate complex workflows.
+- To build a component, provide a YAML application component document. This represents the phases and steps that you need to create the component.
+- An EC2 Image Builder recipe defines the base image to use as your starting point to create a new image, along with the set of components that you add to customize your image and verify that everything works as expected.   
+- Two types of pipeline: AMI and Docker
 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/2f5cd578-7da1-4949-b968-7c4cd40450d4)  
+   
 **AMI**
 - An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. You must specify an AMI when you launch an instance.
 - It can be customized and published, registered or deregistered on Marketplaces open sourced.
@@ -1216,6 +1250,20 @@ DOC-EXAMPLE-BUCKET is the name of the bucket and photos/puppy.jpg is the key.
 - EBS snapshots:  You can back up the data on your Amazon EBS volumes to Amazon S3 by taking point-in-time snapshots. Snapshots are incremental backups, which means that only the blocks on the device that have changed after your most recent snapshot are saved.
 - 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/be64b5b0-ebc5-4569-b3c5-8d736654e7e1)  
+
+**EC2 instance store**  
+- An instance store provides temporary block-level storage for your instance. This storage is located on disks that are physically attached to the host computer.
+- Instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content. It can also be used to store temporary data that you replicate across a fleet of instances, such as a load-balanced pool of web servers.
+- Instance store volumes are attached only at instance launch. You can't attach instance store volumes after launch. You can’t detach an instance store volume from one instance and attach it to a different instance.
+- Therefore, do not rely on instance store volumes for valuable, long-term data.
+- The data on an instance store volume persists even if the instance is rebooted. However, the data does not persist if the instance is stopped, hibernated, or terminated. When the instance is stopped, hibernated, or terminated, every block of the instance store volume is cryptographically erased.
+
+**FSx**
+- High-performance file systems     
+- Amazon FSx for NetApp ONTAP provides fully managed shared storage in the AWS Cloud with the popular data access and management capabilities of NetApp ONTAP.
+- Amazon FSx for OpenZFS provides fully managed cost-effective shared storage powered by the popular OpenZFS file system.
+- Amazon FSx for Windows file server 
+- Amazon FSx also delivers sub-millisecond latencies and high throughput to meet the performance needs of your most demanding workloads.
 
 **Amazon Elastic File System (EFS)**
 - Amazon Elastic File System (EFS) automatically grows and shrinks as you add and remove files with no need for management or provisioning.
