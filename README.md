@@ -1249,6 +1249,12 @@ DOC-EXAMPLE-BUCKET is the name of the bucket and photos/puppy.jpg is the key.
 - Individual Amazon S3 objects can range in size from a minimum of 0 bytes to a maximum of 5 TB. The largest object that can be uploaded in a single PUT is 5 GB.
 - The total volume of data and number of objects you can store in Amazon S3 are unlimited.
 
+_S3 Transfer Acceleration_
+- Amazon S3 Transfer Acceleration can speed up content transfers to and from Amazon S3 by as much as 50-500% for long-distance transfer of larger objects.
+- S3TA shortens the distance between client applications and AWS servers that acknowledge PUTS and GETS to Amazon S3 using our global network of hundreds of CloudFront Edge Locations. 
+- 
+ 
+
 **Amazon S3 Glacier**
 - Amazon S3 Glacier (S3 Glacier) is a secure and durable service for low-cost data archiving and long-term backup.
 - S3 Glacier is a REST-based web service. In terms of REST, vaults and archives are the resources.
