@@ -1167,6 +1167,7 @@ _Classic Load Balancer_
 - Run code without provisioning or managing infrastructure. Simply write and upload code as a .zip file or container image.
 - Automatically respond to code execution requests at any scale, from a dozen events per day to hundreds of thousands per second.
 - Respond to high demand in double-digit milliseconds with Provisioned Concurrency.
+- Pricing works based on number of calls and duration for which code executed 
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/797c8230-a472-4c72-8621-3322f79d1e90)  
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/f717d5da-84d7-4ca8-b4c0-d840c37e2ccc)  
