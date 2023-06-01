@@ -1036,6 +1036,11 @@ _Accelerated Computing_
 - Amazon SQS provides a simple and reliable way for customers to decouple and connect components (microservices) together using queues.
 - Pull mechanism
 
+**Amazon MQ**
+- Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that streamlines setup, operation, and management of message brokers on AWS
+- Migrate from on premises to Amazon MQ with active/standby, a network of brokers, or cluster configurations.
+- Integrate applications and use Lambda functions to poll the Amazon MQ message broker.
+
 ## Customer Engagement
 **Amazon Connect**  
 - Provide superior customer service at a lower cost with an easy-to-use cloud contact center
