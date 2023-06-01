@@ -781,6 +781,14 @@ Expedia Group:
 - Purpose-built devices to cost effectively move petabytes of data, offline. Lease a Snow device to move your data to the cloud.
 - encryption, AWS Snow devices feature a Trusted Platform Module (TPM) that provides a hardware root of trust. Each device is inspected after each use to ensure the integrity of the device and helps preserve the confidentiality of your data.
 - Snowcone, Snowball, SnowMobile 
+- AWS OpsHub is a graphical user interface you can use to manage AWS Snowball devices. AWS OpsHub makes it easy to setup and manage AWS Snowball devices enabling you to rapidly deploy edge computing workloads and simplify data migration to the cloud.
+- The Snowball Edge Client is a terminal application for Snow Family devices that you can use to unlock, set up, and administer devices.
+- AWS snowcone: AWS Snowcone is the most compact and portable device.
+- AWS snowball: AWS Snowball is available as a Compute Optimized device or a Storage Optimized device.
+- AWS snowmobile: AWS Snowmobile is an Exabyte-scale data migration device used to move extremely large amounts of data to AWS. Migrate up to 100PB in a 45-foot long ruggedized shipping container, pulled by a semi-trailer truck.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/ec556b8b-6315-4e70-9360-431756a28039)  
+
 
 ## connectivity options
 
