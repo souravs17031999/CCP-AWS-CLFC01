@@ -729,6 +729,14 @@ Expedia Group:
 - From an architectural perspective, infrastructure, automation, and proximity to the customer were key factors,
 - By deploying ESS on AWS, Expedia Group was able to improve service to customers in the Asia Pacific region as well as Europe. “Latency was our biggest issue,” says Chandramouli. “Using AWS, we decreased average network latency from 700 milliseconds to less than 50 milliseconds
 
+**AWS CDK (CLOUD DEVELOPMENT KIT)
+- Develop applications more efficiently using AWS CDK as the main framework to define cloud infrastructure as code.
+- AWS CDK enables you to define your infrastructure in regular programming languages, you can also write automated unit tests for your infrastructure code, just like you do for your application code. 
+- The AWS CDK supports TypeScript, JavaScript, Python, Java, C#/.Net, and Go. Developers can use one of these supported programming languages to define reusable cloud components known as Constructs. You compose these together into Stacks and Apps.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/59a585f5-e1a5-49b8-a5dd-92616966dae4)   
+
+
 **AWS OpsWorks
 - Chef and Puppet are automation platforms that allow you to use code to automate the configurations of your servers. OpsWorks lets you use Chef and Puppet to automate how servers are configured, deployed, and managed across your Amazon EC2 instances or on-premises compute environments. 
 
