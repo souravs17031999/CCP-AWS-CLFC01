@@ -1222,6 +1222,8 @@ _storage management_
 - S3 Object Lock – Prevent Amazon S3 objects from being deleted or overwritten for a fixed amount of time or indefinitely.
 - S3 Replication – Replicate objects and their respective metadata and object tags to one or more destination buckets
 - S3 Batch Operations – Manage billions of objects at scale with a single S3 API request or a few clicks in the Amazon S3 console
+- An S3 Lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects. There are two types of actions: Transition actions, Expiration actions
+- An S3 Lifecycle configuration is an XML file that consists of a set of rules with predefined actions that you want Amazon S3 to perform on objects during their lifetime.
 
 _How it works_
 - An object is a file and any metadata that describes the file. A bucket is a container for objects.
@@ -1428,6 +1430,12 @@ Weighted routing policy – Use to route traffic to multiple resources in propor
 - 5x faster than mysql, 3x faster than postgresql
 - Amazon Aurora provides built-in security, continuous backups, serverless compute, up to 15 read replicas, automated multi-Region replication  
 
+### AWS RDS VS AURORA
+- If the read workload can’t afford high replication lag and requires more than five read replicas, Aurora PostgreSQL is a better choice. If replication lag is acceptable from seconds to minutes and up to five replicas are enough for your read workload, Amazon RDS for PostgreSQL is a better choice.
+- If your business requirements need quick database crash recovery, Aurora PostgreSQL is a better choice. If crash recovery time isn’t a major concern, Amazon RDS for PostgreSQL is a viable choice.
+- If your database workload reaches the Amazon RDS max limit of 80,000 IOPS, and it requires additional IOPS, Aurora PostgreSQL is the preferred database solution.
+- Amazon RDS for PostgreSQL offers more instance types so you can choose the appropriate size for your workload. If your database workload requires a smaller instance class that isn’t available with Aurora PostgreSQL, Amazon RDS for PostgreSQL is a better choice.
+
 **DYNAMODB**
 - Fast, flexible NoSQL database service for single-digit millisecond performance at any scale
 - Create data schemas and tables in DynamoDB using sample data model templates and datasets available in NoSQL Workbench.
@@ -1436,6 +1444,15 @@ Weighted routing policy – Use to route traffic to multiple resources in propor
 - DynamoDB Accelerator (DAX) is an in-memory cache that delivers fast read performance: taking the time required for reads from milliseconds to microseconds
 - DynamoDB provides native, server-side support for transactions
 - DynamoDB supports high-traffic, extreme-scaled events and can handle millions of queries per second.
+- Amazon DynamoDB _global tables_ are a fully managed, multi-Region, and multi-active database option that delivers fast and localized read and write performance for massively scaled global applications.   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/21c7b185-a78b-4f57-b591-a47697bc2eae)   
+
+**Document DB**
+- storing, querying, indexing, and aggregating data in the same flexible JSON format that is generated in your applications.
+- A JSON document database is a great choice for content management applications, such as blogs and video platforms, because each entity can be stored as a single JSON document.
+- DocumentDB (with MongoDB compatibility) is a fully managed native JSON document database 
+- The storage volume will grow in increments of 10 GB up to a maximum of 4 PiB.  Amazon DocumentDB supports the ability to perform ACID transactions across multiple documents, statements, collections, and databases.
 
 **REDSHIFT**
 - Best price-performance for cloud data warehousing
@@ -1456,6 +1473,21 @@ _data consumption layer_: data is loaded into your Amazon Redshift cluster, wher
 - Achieve cost-optimized performance by adding a cache for frequently read data to optimize resources and lower total cost of ownership
 - Build applications quickly using popular open-source technologies, Redis and Memcached  
 
+**Amazon EMR (Elastic MapReduce)
+- Run big data applications and petabyte-scale data analytics faster
+- Get up to 2X faster time-to-insights with performance-optimized and open-source API-compatible versions of Spark, Hive, and Presto.
+
+**Amazon Neptune**
+- Scale your graphs with unlimited vertices and edges, and more than 100,000 queries per second
+
+**QLDB (Amazon Quantum Ledger Database)**
+- Track and maintain a sequenced history of every application data change using an immutable and transparent journal.
+- Track a claim over its lifetime, and cryptographically verify data integrity to make the application resilient against data entry errors and manipulation.
+- Centralize digital records: No decentralization (different from Amazon managed Blockchain)
+
+**GLUE**
+- AWS Glue is a serverless data integration service that makes data preparation simpler, faster, and cheaper. You can discover and connect to over 70 diverse data sources, manage your data in a centralized data catalog, and visually create, run, and monitor ETL pipelines to load data into your data lakes.
+- More easily support various data processing frameworks, such as ETL and ELT, and various workloads, including batch, micro-batch, and streaming.
 ----------------------------------------------------------------------------------------------------------------------------  
 
 ## technology support
