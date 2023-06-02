@@ -1602,6 +1602,19 @@ _data consumption layer_: data is loaded into your Amazon Redshift cluster, wher
 **GLUE**
 - AWS Glue is a serverless data integration service that makes data preparation simpler, faster, and cheaper. You can discover and connect to over 70 diverse data sources, manage your data in a centralized data catalog, and visually create, run, and monitor ETL pipelines to load data into your data lakes.
 - More easily support various data processing frameworks, such as ETL and ELT, and various workloads, including batch, micro-batch, and streaming.
+
+## Machine learning technologies 
+- Amazon Rekognition (video recognition)
+- Transcribe (speech to text)
+- Polly (text to speech)
+- Translate (natural translation)
+- Lex+ Connect (Amazon alexa technology, NLP, powering chatbots etc...)
+- Comphrehend (ML to find insights and relationships in text)
+- Sagemaker (Fully managed services to build ML models)
+- Forecast (deliver highly accurate forecasts)
+- Kendra (extract answers from within the document, NLP capabilities)
+- Personalize (real time personalize recommendations)
+- Textract (extract text, handwriting and data from scanned documents)
 ----------------------------------------------------------------------------------------------------------------------------  
 
 ## technology support
@@ -1650,7 +1663,7 @@ In the AWS Management Console, you can create three types of customer cases in A
 
 #  Billing and Pricing
 
-## Pricing models 
+## Pricing models (EC2)
 
 **On-Demand**  
 - On-Demand Instances let you pay for compute capacity by the hour or second with no long-term commitments. 
@@ -1707,6 +1720,57 @@ If RI sharing is turned off for an account in an organization, then:
 - RI discounts from other accounts in the organization's consolidated billing family don't apply.
 - The charges accrued on that account are still added to the organization's consolidated bill and are paid by the management account.
 
+## Pricing models (LAMBDA FUNCTION)
+- Pay for call (number of times API calls)
+- Pay for duration (apply to code that runs in the handler of a function as well as initialization code that is declared outside of the handler. )
+
+## Pricing models (ECS)
+- EC2 LAUNCH TYPE MODEL (PAY FOR aws resources created): ec2 instances, ebs volumes created 
+
+## FARGATE
+- FARGATE LAUNCH TYPE MODEL (pay for vCPU memory resources, are calculated from the time your container images are pulled until the Amazon ECS Task terminates)
+
+## S3 STORAGE 
+- The rate you’re charged depends on your objects' size, how long you stored the objects during the month, and the storage class—S3 Standard, S3 Intelligent-Tiering, S3 Standard-Infrequent Access, S3 One Zone-Infrequent Access, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval (Formerly S3 Glacier), and S3 Glacier Deep Archive. 
+- Data transfer out of S3 region
+- S3 transfer acceleration
+- Lifecycle transitions 
+- Number and type of requests
+- Replications 
+
+## EBS volumes
+- Volume type (based on performance)
+- Storage volume per month provisioned
+- IOPS 
+- Snapshots
+- Data transfer (outbound)
+
+## RDS
+- Per hour billing
+- DB characterstics : engine, size, memory class
+- purchase type : On-demand, Reserved instances
+- Backup storage (no additional charge)
+- Data transferred between Amazon RDS and Amazon EC2 instances in the same Availability Zone -> Free. 
+- Data transferred between Availability Zones for replication of Multi-AZ deployments -> Free.      
+- Based on the type (e.g. db.t2.micro, db.m4.large) of the DB instance consumed.
+
+- For cost savings, Use Private IP's : free between ec2 instances in same az, but some costs for between az's and inter region costs (private IP discounted price).   
+
+
+**AWS organizations**
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/58482d31-5687-4929-934a-be37b0df0a33)   
+
+- AWS Organizations is an account management service that enables you to consolidate multiple AWS accounts into an organization that you create and centrally manage.
+- You can group your accounts into organizational units (OUs) and attach different access policies to each OU.
+- Organizational unit (OU): A container for accounts within a root. An OU also can contain other OUs, enabling you to create a hierarchy that resembles an upside-down tree, with a root at the top and branches of OUs that reach down, ending in accounts that are the leaves of the tree. When you attach a policy to one of the nodes in the hierarchy, it flows down and affects all the branches (OUs) and leaves (accounts) beneath it. An OU can have exactly one parent, and currently each account can be a member of exactly one OU.
+- The management account is the account that you use to create the organization. From the organization's management account, you can do the following: Create accounts in the organization, Invite other existing accounts to the organization, Remove accounts from the organization, Manage invitations, Apply policies to entities (roots, OUs, or accounts) within the organization .
+- You can't change an organization's management account.
+- Enable integration with supported AWS services to provide service functionality across all of the accounts in the organization.
+- Service control policies (SCPs) are a type of organization policy that you can use to manage permissions in your organization.
+- Allow lists and deny lists are complementary strategies that you can use to apply SCPs to filter the permissions that are available to accounts.
+
+
 **various account structures in relation to AWS billing and pricing**   
 
 _Consolidated billing for AWS Organizations_ 
@@ -1724,6 +1788,24 @@ _Consolidated billing for AWS Organizations_
 - When you require fine-grained cost allocation, you can apply cost allocation tags to individual resources in each of your accounts.
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5f064a35-ead7-4efa-87e2-3a0221fffe3c)  
+
+**AWS CONTROL TOWER**
+- AWS Control Tower simplifies AWS experiences by orchestrating multiple AWS services on your behalf while maintaining the security and compliance needs of your organization.
+- AWS Control Tower orchestrates the capabilities of several other AWS services, including AWS Organizations, AWS Service Catalog, and AWS IAM Identity Center (successor to AWS Single Sign-On), to build a landing zone in less than an hour. Resources are set up and managed on your behalf.
+- AWS Control Tower orchestration extends the capabilities of AWS Organizations. AWS Control Tower applies controls (sometimes called guardrails). For example, you can use controls to help ensure that security logs and necessary cross-account access permissions are created, and not altered.
+
+**AWS SERVICE CATALOGUE**
+- centrally manage your cloud resources to achieve governance at scale of your infrastructure as code (IaC) templates, written in CloudFormation or Terraform
+- govern a curated catalog of AWS resources that can be shared at the permissions level so you can quickly provision approved cloud resources without needing direct access to the underlying AWS services.
+
+**AWS compute optimizer**
+- helps avoid overprovisioning and underprovisioning four  types of AWS resources—Amazon Elastic Compute Cloud (EC2) instance types, Amazon Elastic Block Store (EBS) volumes, Amazon Elastic Container Service (ECS) services on AWS Fargate, and AWS Lambda functions—based on your utilization data.
+- Get improved recommendations for optimizing EC2 instances and Auto Scaling groups by using three months of historical data.
+
+**AWS cost anamoly detection**
+- Stay informed of spend anomalies through automated detection alert, via email or Amazon SNS topic, at the frequency of your choice.
+- Once cost monitors and alert subscriptions are created, you’re all set! Anomaly Detection will begin to work within 24 hours and you will be notified if any anomaly meets your alert threshold.
+- You don’t need to define an anomaly (e.g. percent or dollar increase) as Anomaly Detection does this automatically for you and adjusts over time. 
 
 **Billing support**   
 
