@@ -467,7 +467,8 @@ Centrally manage your environment as you scale your AWS resources	AWS Organizati
 **Observe and monitor resources and applications on AWS, on premises, and on other clouds	Amazon CloudWatch
 - Visualize performance data, create alarms, and correlate data to understand and resolve the root cause of performance issues in your AWS resources.
 - Analyze metrics, logs, logs analytics, and user requests to speed up debugging and reduce overall mean time to resolution.
-- Find out exactly when your website is impacted and for how long by viewing screenshots, logs, and web requests at any point in time.
+- Find out exactly when your website is impacted and for how long by viewing screenshots, logs, and web requests at any point in time.   
+- By default, ec2 instances don't push metrics, cloudwatch agent needs to be installed on the ec2 instances.  
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/c64bda19-d37f-4308-9248-7cd6e2cbd793)
 
