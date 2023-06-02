@@ -1418,6 +1418,13 @@ _Software VPN-to-AWS Site-to-Site VPN_
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/368217eb-53cc-4e35-ba90-c30b5a0917ed)   
 
+_Site_to_Site_VPN_
+- Amazon VPC provides the option of creating an IPsec VPN connection between your remote networks and Amazon VPC over the internet (important note is to observe it go through public internet although encrypted)
+- Requires customer gateway (on customer site), virtual private gateway (AWS)
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/33dae74c-0c86-4f8d-bb2d-34597806f076)  
+
+
 - An Elastic IP address is a static, public IPv4 address designed for dynamic cloud computing. You can associate an Elastic IP address with any instance or network interface in any VPC in your account.
 - A NAT gateway is a Network Address Translation (NAT) service. You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances. Each NAT gateway is created in a specific Availability Zone.
 - Internet traffic from the instances in the private subnet is routed to the NAT instance, which then communicates with the internet. Therefore, the NAT instance must have internet access. It must be in a public subnet (a subnet that has a route table with a route to the internet gateway), and it must have a public IP address or an Elastic IP address.
