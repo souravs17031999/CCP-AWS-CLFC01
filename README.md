@@ -453,6 +453,7 @@ Centrally manage your environment as you scale your AWS resources	AWS Organizati
 **Automated and continual vulnerability management at scale	Amazon Inspector
 - Quickly discover vulnerabilities, Use up-to-date common vulnerabilities and exposures (CVE), Support compliance requirements and best practices for NIST CSF, PCI DSS; Identify zero-day vulnerabilities sooner
 - Mean Time to Respond (MTTR) : Accelerate MTTR
+- Only scans ec2 instances, container images and lambda functions. Rest, scans all infra only when needed.  
 
 **Automatically centralize your security data in a few steps 	Amazon Security Lake (Preview)
 - Analyze multiple years of security data quickly, Support on-demand analysis of petabyte-scale data
