@@ -1369,6 +1369,10 @@ management required.
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/24ccd100-5073-46d9-b9aa-c6c71924aeaa)   
 
+- VPC connectivity options
+
+![a drawio](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/f138bad6-70bf-4579-b704-9b04ecd043d4)   
+
 
 _VPC FLOW LOGS_
 - VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data can be published to the following locations: Amazon CloudWatch Logs, Amazon S3, or Amazon Kinesis Data Firehose.   
