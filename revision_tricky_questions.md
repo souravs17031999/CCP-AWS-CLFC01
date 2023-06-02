@@ -86,6 +86,29 @@ Which AWS service will achieve lower latency and high transfer speeds?
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/afbff535-840c-44ec-bd39-c7ccb95b4d11)  
 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/321f1a79-7e27-4e85-b70a-6f64edf941fc)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/67630c64-115e-4012-a5da-25593a6b5061)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e077c8fa-96c9-48cc-bbda-381a5c47d4f7)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/a1c537c4-1eb1-4c77-9a0e-c62818b4c832)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/a7e2648b-4f89-418e-94bf-07c045e4c871)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/99667522-08d9-4f6b-b192-8823216b2bd1)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e27c52ce-9831-473f-aae1-83c561ac2786)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/0faebc2c-45f6-4887-99dd-eea08311416b)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/1c34b799-00e9-4201-8611-5d0a6655beb1)  
+
+
+
+
+
+
 
 
 
