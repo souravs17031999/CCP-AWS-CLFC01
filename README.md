@@ -1363,13 +1363,60 @@ management required.
 - Use route tables to determine where network traffic from your subnet or gateway is directed.
 - A gateway connects your VPC to another network. For example, use an internet gateway to connect your VPC to the internet. Use a VPC endpoint to connect to AWS services privately   
 - An internet gateway enables resources in your public subnets (such as EC2 instances) to connect to the internet if the resource has a public IPv4 address or an IPv6 address. Similarly, resources on the internet can initiate a connection to resources in your subnet using the public IPv4 address or IPv6 address.  
-- Use a VPC peering connection to route traffic between the resources in two VPCs.
+- Use a VPC peering connection to route traffic between the resources in two VPCs.  
+- A VPC endpoint enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink. Amazon VPC instances do not require public IP addresses to communicate with resources of the service. Traffic between an Amazon VPC and a service does not leave the Amazon network.
+- There are two types of VPC endpoints: interface endpoints, gateway endpoints  ex. 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/24ccd100-5073-46d9-b9aa-c6c71924aeaa)   
+
+
+_VPC FLOW LOGS_
+- VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data can be published to the following locations: Amazon CloudWatch Logs, Amazon S3, or Amazon Kinesis Data Firehose.   
+
+- Flow logs can help you with a number of tasks, such as:   
+- Diagnosing overly restrictive security group rules   
+- Monitoring the traffic that is reaching your instance   
+- Determining the direction of the traffic to and from the network interfaces     
+- You can use Athena with VPC Flow Logs to quickly get actionable insights about the traffic flowing through your VPC. 
+- Amazon VPC publishes data about your VPCs to Amazon CloudWatch. You can retrieve statistics about your VPCs as an ordered set of time-series data, known as metrics. 
+
 _VPC PEERING CONNECTION_  
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/4a888b9d-eecc-4b6e-9039-95eebcfb89de)     
 
-- Use a transit gateway, which acts as a central hub, to route traffic between your VPCs, VPN connections, and AWS Direct Connect connections
+- Multiple VPC peering connection 
+- VPC A is peered with both VPC B and VPC C. VPC B and VPC C are not peered, and you cannot use VPC A as a transit point for peering between VPC B and VPC C. If you want to enable routing of traffic between VPC B and VPC C, you must create a unique VPC peering connection between them.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/5b19f2b4-731e-41dd-bbe8-d1739c17422e)  
+
+
+- Use a transit gateway, which acts as a central hub, to route traffic between your VPCs, VPN connections, and AWS Direct Connect connections  
 _AWS TRANSIT GATEWAY_  
+- Supports hybrid connectivity using VPN or Direct Connect Gateway attachments. Reuse same VPN/DX connection for multiple VPCs.
+- TGW Route Tables per attachment allow for fine-grained routing
+- Additional hop will introduce some latency
+- Routing through a transit gateway operates at layer 3, where the packets are sent to a specific next-hop attachment, based on their destination IP addresses.
+- AWS Transit Gateway is a highly available and scalable service to consolidate the AWS VPC routing configuration for a region with a hub-and-spoke architecture. Each spoke VPC only needs to connect to the Transit Gateway to gain access to other connected VPCs.
+
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/d5f18a11-1c7e-4f66-99d9-2660c972ac85)   
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/984d2d79-42f9-4e17-8c54-880cddb1e1df)   
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/67a322ae-a0f8-4af8-86c0-ddd76abd1b22)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/d8ae00f6-c287-4698-adda-f130fa6d23ac)   
+
+_AWS PrivateLink_
+- We recommend this approach if you want to use services offered by another VPC securely within an AWS network, using private IP addresses. Alternatively, AWS PrivateLink is a good solution when the VPCs have overlapped IP addresses.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/fdf82e42-57e7-43b6-ab86-1a454447519c)    
+
+_Software VPN_
+- Amazon VPC provides network routing flexibility. This includes the ability to create secure VPN tunnels between two or more software VPN appliances to connect multiple VPCs into a larger virtual private network so that instances in each VPC can seamlessly connect to each other using private IP addresses.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/2b811e12-2b8f-4bae-a797-e1934762977f)  
+
+_Software VPN-to-AWS Site-to-Site VPN_
+- Amazon VPC provides the flexibility to combine the AWS managed VPN and software VPN options to connect multiple VPCs. With this design, you can create secure VPN tunnels between a software VPN appliance and a virtual private gateway, allowing instances in each VPC to seamlessly connect to each other using private IP addresses.
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/368217eb-53cc-4e35-ba90-c30b5a0917ed)   
 
 - An Elastic IP address is a static, public IPv4 address designed for dynamic cloud computing. You can associate an Elastic IP address with any instance or network interface in any VPC in your account.
 - A NAT gateway is a Network Address Translation (NAT) service. You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances. Each NAT gateway is created in a specific Availability Zone.
