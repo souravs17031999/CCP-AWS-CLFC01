@@ -1839,7 +1839,11 @@ _Amazon QuickSight_
 
 _AWS Managed Service Provider (MSP) Partner?_
 - AWS Managed Service Providers (MSP) provide end-to-end AWS solutions to customers at any stage of the cloud journey—from consultation on initial solution design, to building applications, through to ongoing optimization and support.  
-![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/fd6d4ddf-18f7-40ce-8aec-71520373bfcc)  
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/fd6d4ddf-18f7-40ce-8aec-71520373bfcc)    
+
+_AWS IQ_
+- Post a project request, select an expert, and pay directly through AWS.
+- AWS IQ connects you to AWS Certified experts for hands-on help for your AWS projects. You create a request and choose from experts who respond. 
 
 **Cost Allocation Via Tagging**  
 - A tag is a label that you or AWS assigns to an AWS resource. Each tag consists of a key and a value.
