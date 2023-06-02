@@ -547,6 +547,29 @@ Filter and control outbound DNS traffic for your VPCs	Amazon Route 53 Resolver D
 - Automatically collect evidence, monitor your compliance posture, and proactively reduce risk by fine-tuning your controls.
 - Avoid the need to collect, review, and manage evidence with automated evidence collection.
 
+
+**AWS X-Ray**
+- Analyze and debug production and distributed applications
+- Trace user requests through your application while meeting your security and compliance
+- Identify bottlenecks and determine where high latencies are occurring to improve application performance.
+- Visual diagram of dependencies and tracing the application request/response  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/69bc1f45-c95a-4acb-bcae-9fa7277d7eb8)  
+
+
+**AWS CodeGuru**  
+- Detect security vulnerabilities and automate code reviews
+- CodeGuru Reviewer uses machine learning and automated reasoning, AWS and security best practices, and hard-learned lessons across millions of code reviews on thousands of open-source and Amazon repositories to automate code reviews.
+- It detects defects and vulnerabilities that are difficult to find in Java and Python code and offers recommendations on how to remediate them.
+- CodeGuru Profiler optimizes performance for applications running in production and identifies the most expensive lines of code. It is always searching for application performance optimizations, recommending ways to fix them to reduce CPU utilization, cut compute costs, and improve application performance.
+
+Ex. 
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/0dc7b918-0153-4cb7-aa58-cb1395f3e8b0)  
+
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/3c26083a-cd11-4819-8dd4-b7428f457420)   
+
+
 ==============================================================================
 
 ### AWS IAM IN DETAIL
@@ -1051,6 +1074,12 @@ _Accelerated Computing_
 ## Management, Monitoring, and Governance:
 **Amazon EventBridge**
 - Easily build loosely coupled, event-driven architectures to help you deploy new features faster.  
+- Event rules to react to something like some action if some IAM root user logs in etc....
+-  pay-per-invoke task and event scheduler that triggers based on parameters you define
+-  Schema registry: model event schema
+-  archive events sent to eventbus, can be replayed archived events 
+-  An event bus is a pipeline that receives events. Rules associated with the event bus evaluate events as they arrive. Each rule checks whether an event matches the rule's criteria.
+-  Default eventbus, Custom eventbus, Partner eventbus 
 
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/f8b819e7-6893-4d2d-b469-a736a38ee0b2)  
 
