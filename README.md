@@ -100,19 +100,20 @@ sustainability metrics
 
 **AWS Cloud Value Framework  
 
-** Cost Savings (TCO)  
-50%+ reduction in TCO.   
+**Cost Savings (TCO)  
+- TCO: Cloud TCO involves calculating the costs required to host, run, integrate, secure and manage workloads in the cloud over their lifetime. These include fees associated with the underlying infrastructure, such as compute, data transfer and storage.
+- 50%+ reduction in TCO.   
 - GE Oil & Gas is migrating 500 applications to the cloud by the end of 2016 as part of a major digital transformation,   
 helping it attain a 52 percent reduction in TCO. GE Oil & Gas is a business unit of global conglomerate General Electric,   
 with energy-related operations around the world. The company's cloud migration project entailed reexamining—and in many cases,   
 eliminating—legacy processes, resulting not only in lower IT costs but also in greater speed to market and more agility to compete   
 even better in an industry experiencing immense market challenges.   
 
-** Staff Productivity  
+**Staff Productivity  
 Over 500 hours per year of server configuration time saved.  
 - Sage company    
 
-** Operational Resilience   
+**Operational Resilience   
 Critical workloads run in multiple AZs and Regions for robust DR.   
 - Expedia Group is all in on AWS, with plans to migrate 80 percent of its mission-critical apps from its on-premises data    
 centers to the cloud in the next two to three years. By using AWS, Expedia Group has become more resilient. 
@@ -346,6 +347,12 @@ AWS has certification for compliance with ISO/IEC 27001:2013, 27017:2015, 27018:
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/9b9f9623-2107-444c-a698-4bc0a8273f86)  
   
 ![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/e8c3322a-eb23-4986-9fcb-3114acf1d561)
+
+**Shared controls**
+- AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services.
+- Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications.
+- Configuration Management – AWS maintains the configuration of its infrastructure devices, but a customer is responsible for configuring their own guest operating systems, databases, and applications.
+- Awareness & Training – AWS trains AWS employees, but a customer must train their own employees.   
 
 =============================================
 
@@ -1623,6 +1630,15 @@ _data consumption layer_: data is loaded into your Amazon Redshift cluster, wher
 - there is documentation (best practices, whitepapers, AWS Knowledge Center, forums, blogs
 - includes AWS Official Knowledge Center articles and videos covering the most frequent questions and requests that we receive from AWS customers.
 
+**AWS Personal Health dashboard**
+- you have a personalized view of the AWS service status that powers your application
+- Use the AWS Health Dashboard to learn about specific operational issues that affect your account. For example, if you receive an event for a lost Amazon Elastic Block Store (EBS) volume associated with one of your Amazon EC2 instances, you can quickly view how your resources are impacted, helping you to troubleshoot and remediate.
+- Personal Health Dashboard provides alerts and remediation guidance when AWS is experiencing events that may impact you
+
+**AWS service dashboard**
+- AWS Service Health Dashboard gives you an overview of how your AWS services perform
+- displays the general status of AWS services
+
 **AWS Support**   
 - The AWS Trust & Safety team can assist you when AWS resources are implicated in the following abuse types:
 - Web content/non-copyright intellectual property that's objectionable content hosted on an AWS resource
@@ -1689,6 +1705,7 @@ In the AWS Management Console, you can create three types of customer cases in A
 
 **Per-second billing**   
 - EC2 per-second billing removes the cost of unused minutes and seconds from your bill. Focus on improving your applications instead of maximizing hourly usage, especially for instances running over irregular time periods such as dev/testing, data processing, analytics, batch processing, and gaming applications.
+- EC2 usage is billed in one-second increments, with a minimum of 60 seconds. Similarly, provisioned storage for Amazon Elastic Block Store (Amazon EBS) volumes is billed per-second increments, with a 60-second minimum.
 
 **Reserved instances (Savings Plans)**  
 - Reserved Instances are not physical instances, but rather a billing discount that is applied to the running On-Demand Instances in your account.
