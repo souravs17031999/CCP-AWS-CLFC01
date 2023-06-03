@@ -1537,6 +1537,7 @@ Weighted routing policy – Use to route traffic to multiple resources in propor
 - Amazon RDS allows you to encrypt your databases using keys you manage through AWS Key Management Service (KMS). Amazon RDS supports the use of SSL to secure data in transit.
 - Amazon RDS provides Amazon CloudWatch metrics for your database instances.
 
+![image](https://github.com/souravs17031999/CCP-AWS-CLFC01/assets/33771969/3f98dc2d-0daf-458e-9a7a-355ced29c9f9)   
 
 **Amazon Aurora
 - Power performance-intensive applications and critical workloads while maintaining full compatibility with MySQL and PostgreSQL
